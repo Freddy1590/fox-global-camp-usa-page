@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026 FOX Global Camp in the USA | See, Ask, Speak</title>
+  <meta name="description" content="미국에서 보고, 영어로 묻고, 생각을 말하는 2026 FOX Global Camp in the USA. 보스턴, 뉴욕, 워싱턴 D.C.에서 대학 탐방, STEAM 필드트립, 도시 문화 탐방, 영어 미션을 경험하는 글로벌캠프입니다." />
+  <meta property="og:title" content="2026 FOX Global Camp in the USA" />
+  <meta property="og:description" content="미국에서 보고, 영어로 묻고, 생각을 말하다. FOX 글로벌 활동 캠프." />
+  <script src="https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js"></script>
+  <style>
+    :root {
+      --ink: #0a1f3d;
+      --navy: #102f55;
+      --blue: #1f6fb8;
+      --sky: #e9f5ff;
+      --sun: #fbcc3e;
+      --coral: #ee6b5f;
+      --mint: #6fc6a8;
+      --cream: #fff8e6;
+      --line: #d9e3ee;
+      --text: #233044;
+      --muted: #66758a;
+      --white: #ffffff;
+      --shadow: 0 18px 42px rgba(16, 47, 85, 0.16);
+      --soft: 0 10px 28px rgba(16, 47, 85, 0.10);
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--white);
+      font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .keep {
+      word-break: keep-all;
+      overflow-wrap: anywhere;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.92);
+      border-bottom: 1px solid rgba(217, 227, 238, 0.9);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      width: calc(100% - 32px);
+      max-width: 1180px;
+      height: 68px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      min-width: 0;
+    }
+
+    .logo img {
+      height: 40px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      color: #43536a;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 44px;
+      padding: 12px 18px;
+      border: 0;
+      border-radius: var(--radius);
+      font-weight: 900;
+      line-height: 1.2;
+      cursor: pointer;
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: var(--soft);
+    }
+
+    .btn-primary {
+      background: var(--sun);
+      color: var(--ink);
+    }
+
+    .btn-dark {
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .btn-light {
+      background: var(--white);
+      color: var(--ink);
+      border: 1px solid rgba(255, 255, 255, 0.55);
+    }
+
+    .btn.is-disabled {
+      cursor: not-allowed;
+      opacity: 0.72;
+      pointer-events: none;
+    }
+
+    .btn.is-disabled:hover {
+      transform: none;
+      box-shadow: none;
+    }
+
+    .hero {
+      min-height: 720px;
+      height: calc(100vh - 130px);
+      max-height: 860px;
+      display: grid;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      color: var(--white);
+      background:
+        linear-gradient(90deg, rgba(10, 31, 61, 0.92) 0%, rgba(10, 31, 61, 0.78) 42%, rgba(10, 31, 61, 0.28) 100%),
+        url("assets/photos/nyc-skyline.jpg") center / cover no-repeat;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 34%;
+      background: linear-gradient(180deg, rgba(10, 31, 61, 0) 0%, rgba(10, 31, 61, 0.88) 100%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      width: calc(100% - 32px);
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 72px 0 48px;
+    }
+
+    .hero-copy {
+      max-width: 820px;
+    }
+
+    .eyebrow-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 12px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255, 255, 255, 0.30);
+      background: rgba(255, 255, 255, 0.14);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 900;
+      backdrop-filter: blur(10px);
+    }
+
+    .chip.dark {
+      border-color: rgba(31, 111, 184, 0.18);
+      background: #eff7ff;
+      color: var(--ink);
+    }
+
+    .chip.pending {
+      border-color: rgba(238, 107, 95, 0.35);
+      background: #fff1ef;
+      color: #a13c34;
+    }
+
+    h1, h2, h3, p {
+      margin-top: 0;
+    }
+
+    h1 {
+      margin-bottom: 22px;
+      color: var(--white);
+      font-size: clamp(42px, 7vw, 86px);
+      line-height: 1.05;
+      font-weight: 950;
+    }
+
+    .hero-lead {
+      max-width: 720px;
+      margin-bottom: 30px;
+      color: rgba(255, 255, 255, 0.90);
+      font-size: clamp(19px, 2.2vw, 27px);
+      font-weight: 850;
+      line-height: 1.45;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 34px;
+    }
+
+    .quick-facts {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      max-width: 920px;
+    }
+
+    .fact {
+      min-height: 108px;
+      padding: 16px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      background: rgba(255, 255, 255, 0.13);
+      backdrop-filter: blur(10px);
+    }
+
+    .fact dt {
+      margin-bottom: 7px;
+      color: var(--sun);
+      font-size: 13px;
+      font-weight: 900;
+    }
+
+    .fact dd {
+      margin: 0;
+      color: var(--white);
+      font-size: 17px;
+      font-weight: 900;
+      line-height: 1.35;
+    }
+
+    .section {
+      padding: 92px 0;
+    }
+
+    .section.alt {
+      background: #f6f9fc;
+    }
+
+    .section.dark {
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .section.cream {
+      background: var(--cream);
+    }
+
+    .wrap {
+      width: calc(100% - 32px);
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .section-head {
+      max-width: 780px;
+      margin-bottom: 42px;
+    }
+
+    .section-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 14px;
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 950;
+    }
+
+    .section.dark .section-kicker {
+      color: var(--sun);
+    }
+
+    h2 {
+      margin-bottom: 16px;
+      color: var(--ink);
+      font-size: clamp(31px, 4.2vw, 54px);
+      line-height: 1.16;
+      font-weight: 950;
+    }
+
+    .section.dark h2,
+    .section.dark h3 {
+      color: var(--white);
+    }
+
+    .section-lead {
+      color: var(--muted);
+      font-size: 19px;
+      font-weight: 650;
+    }
+
+    .section.dark .section-lead {
+      color: rgba(255, 255, 255, 0.76);
+    }
+
+    .underline {
+      background-image: linear-gradient(transparent 62%, rgba(251, 204, 62, 0.85) 62%);
+      padding: 0 0.06em;
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grid-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--soft);
+      overflow: hidden;
+    }
+
+    .card.pad {
+      padding: 24px;
+    }
+
+    .icon-box {
+      width: 46px;
+      height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      border-radius: var(--radius);
+      background: var(--sky);
+      color: var(--blue);
+    }
+
+    .card h3,
+    .mission-panel h3,
+    .timeline h3 {
+      margin-bottom: 10px;
+      color: var(--ink);
+      font-size: 22px;
+      line-height: 1.3;
+      font-weight: 950;
+    }
+
+    .card p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-weight: 650;
+    }
+
+    .reason-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .reason-card {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--soft);
+    }
+
+    .reason-no {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 18px;
+      border-radius: 50%;
+      background: var(--sun);
+      color: var(--ink);
+      font-size: 15px;
+      font-weight: 950;
+    }
+
+    .reason-card h3 {
+      margin-bottom: 10px;
+      color: var(--ink);
+      font-size: 22px;
+      line-height: 1.3;
+      font-weight: 950;
+    }
+
+    .reason-card p {
+      margin: 0;
+      color: var(--muted);
+      font-weight: 650;
+    }
+
+    .care-note {
+      display: grid;
+      grid-template-columns: 54px minmax(0, 1fr);
+      gap: 16px;
+      align-items: start;
+      margin-bottom: 28px;
+      padding: 22px;
+      border: 1px solid rgba(31, 111, 184, 0.18);
+      border-radius: var(--radius);
+      background: #f4faff;
+      box-shadow: var(--soft);
+    }
+
+    .care-note iconify-icon {
+      width: 54px;
+      height: 54px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--ink);
+      color: var(--sun);
+    }
+
+    .care-note strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--ink);
+      font-size: 21px;
+      line-height: 1.35;
+      font-weight: 950;
+    }
+
+    .care-note p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .care-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 34px;
+    }
+
+    .care-card {
+      min-height: 132px;
+      padding: 20px;
+      border: 1px solid rgba(31, 111, 184, 0.16);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--soft);
+    }
+
+    .care-card iconify-icon {
+      margin-bottom: 14px;
+      color: var(--blue);
+    }
+
+    .care-card h3 {
+      margin-bottom: 7px;
+      color: var(--ink);
+      font-size: 18px;
+      line-height: 1.35;
+      font-weight: 950;
+    }
+
+    .care-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.6;
+      font-weight: 650;
+    }
+
+    .photo-card img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      background: #dfe7ef;
+    }
+
+    .photo-card .body {
+      padding: 20px;
+    }
+
+    .video-shell {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 24px;
+      align-items: stretch;
+      max-width: 980px;
+    }
+
+    .video-frame {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      background: var(--ink);
+      box-shadow: var(--shadow);
+      aspect-ratio: 16 / 9;
+    }
+
+    .video-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.88;
+      transition: transform 220ms ease;
+    }
+
+    .video-frame:hover img {
+      transform: scale(1.03);
+    }
+
+    .play-mark {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 76px;
+      height: 76px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: #ff0000;
+      color: var(--white);
+      transform: translate(-50%, -50%);
+      box-shadow: var(--shadow);
+    }
+
+    .video-caption {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      padding: 14px 16px;
+      border-radius: var(--radius);
+      background: rgba(10, 31, 61, 0.82);
+      color: var(--white);
+      font-weight: 900;
+      backdrop-filter: blur(10px);
+    }
+
+    .video-side {
+      padding: 24px;
+      border-radius: var(--radius);
+      background: var(--ink);
+      color: var(--white);
+      box-shadow: var(--soft);
+    }
+
+    .video-side h3 {
+      margin-bottom: 12px;
+      color: var(--white);
+      font-size: 24px;
+      line-height: 1.3;
+      font-weight: 950;
+    }
+
+    .video-side p {
+      margin-bottom: 16px;
+      color: rgba(255, 255, 255, 0.78);
+      font-weight: 700;
+    }
+
+    .activity-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px 26px;
+    }
+
+    .activity-card img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      border-radius: var(--radius);
+      box-shadow: var(--soft);
+      background: #dfe7ef;
+    }
+
+    .activity-card h3 {
+      margin: 14px 0 6px;
+      text-align: center;
+      color: var(--ink);
+      font-size: 22px;
+      line-height: 1.35;
+      font-weight: 950;
+    }
+
+    .activity-card p {
+      margin: 0;
+      text-align: center;
+      color: #33435a;
+      font-size: 16px;
+      font-weight: 750;
+      line-height: 1.55;
+    }
+
+    .photo-label {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 10px;
+      color: var(--coral);
+      font-size: 13px;
+      font-weight: 950;
+    }
+
+    .mission {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+      gap: 28px;
+      align-items: start;
+    }
+
+    .mission-panel {
+      padding: 28px;
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--soft);
+      border: 1px solid rgba(251, 204, 62, 0.55);
+    }
+
+    .mission-title {
+      color: var(--ink);
+      font-size: clamp(30px, 4vw, 50px);
+      line-height: 1.12;
+      font-weight: 950;
+      margin-bottom: 16px;
+    }
+
+    .role-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 22px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .role-list li {
+      display: grid;
+      grid-template-columns: 46px minmax(0, 1fr);
+      gap: 12px;
+      align-items: start;
+      padding: 14px;
+      border-radius: var(--radius);
+      background: #f8fbfe;
+      border: 1px solid var(--line);
+    }
+
+    .role-list strong {
+      display: block;
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    .role-list span {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .num {
+      width: 38px;
+      height: 38px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--sun);
+      color: var(--ink);
+      font-weight: 950;
+    }
+
+    .mission-photo {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .mission-photo img {
+      width: 100%;
+      height: 100%;
+      min-height: 520px;
+      object-fit: cover;
+    }
+
+    .mission-caption {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      padding: 18px;
+      border-radius: var(--radius);
+      background: rgba(10, 31, 61, 0.86);
+      color: var(--white);
+      backdrop-filter: blur(10px);
+    }
+
+    .mission-caption p {
+      margin-bottom: 0;
+      color: rgba(255, 255, 255, 0.84);
+      font-weight: 750;
+    }
+
+    .flow {
+      display: grid;
+      gap: 14px;
+    }
+
+    .flow-item {
+      display: grid;
+      grid-template-columns: 150px minmax(0, 1fr);
+      gap: 18px;
+      padding: 20px;
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.13);
+    }
+
+    .flow-time {
+      color: var(--sun);
+      font-weight: 950;
+    }
+
+    .flow-item h3 {
+      margin-bottom: 6px;
+      font-size: 21px;
+    }
+
+    .flow-item p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.74);
+      font-weight: 650;
+    }
+
+    .schedule-card {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr);
+      gap: 22px;
+      align-items: center;
+      padding: 28px;
+      border: 1px solid rgba(31, 111, 184, 0.16);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--soft);
+    }
+
+    .schedule-term {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 86px;
+      padding: 18px;
+      border-radius: var(--radius);
+      background: var(--ink);
+      color: var(--white);
+      font-size: 24px;
+      font-weight: 950;
+      text-align: center;
+    }
+
+    .schedule-card h3 {
+      margin-bottom: 8px;
+      color: var(--ink);
+      font-size: 28px;
+      line-height: 1.25;
+      font-weight: 950;
+    }
+
+    .schedule-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .notice {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 18px;
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.10);
+      color: rgba(255, 255, 255, 0.86);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      font-weight: 750;
+    }
+
+    .cta {
+      background:
+        linear-gradient(90deg, rgba(10, 31, 61, 0.92), rgba(16, 47, 85, 0.72)),
+        url("assets/photos/mit-dome.jpg") center / cover no-repeat;
+      color: var(--white);
+    }
+
+    .cta-box {
+      max-width: 760px;
+    }
+
+    .cta h2 {
+      color: var(--white);
+    }
+
+    .cta p {
+      color: rgba(255, 255, 255, 0.80);
+    }
+
+    .footer {
+      padding: 40px 0;
+      background: #07172c;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 14px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 26px;
+      align-items: start;
+    }
+
+    .footer img {
+      height: 38px;
+      width: auto;
+      margin-bottom: 14px;
+      padding: 7px;
+      border-radius: var(--radius);
+      background: var(--white);
+    }
+
+    .credits a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    @media (max-width: 1020px) {
+      .nav-links {
+        display: none;
+      }
+
+      .quick-facts,
+      .reason-grid,
+      .care-grid,
+      .grid-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .mission {
+        grid-template-columns: 1fr;
+      }
+
+      .mission-photo img {
+        min-height: 420px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav {
+        width: calc(100% - 24px);
+        max-width: 1180px;
+        height: 62px;
+        gap: 12px;
+      }
+
+      .logo img {
+        height: 34px;
+      }
+
+      .nav .btn {
+        flex: 0 0 auto;
+        min-height: 38px;
+        padding: 10px 12px;
+        font-size: 13px;
+      }
+
+      .hero {
+        min-height: 720px;
+        height: calc(100vh - 110px);
+        max-height: 900px;
+        background-position: center;
+      }
+
+      .hero-inner {
+        width: calc(100% - 28px);
+        max-width: 1180px;
+        padding: 46px 0 28px;
+      }
+
+      h1 {
+        font-size: 38px;
+      }
+
+      .hero-lead {
+        font-size: 17px;
+      }
+
+      .eyebrow-row .chip {
+        width: 100%;
+      }
+
+      h2 {
+        font-size: 29px;
+      }
+
+      .section-lead {
+        font-size: 17px;
+      }
+
+      .hero-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .grid-2,
+      .grid-3,
+      .grid-4 {
+        grid-template-columns: 1fr;
+      }
+
+      .video-shell,
+      .reason-grid,
+      .care-grid,
+      .activity-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-facts {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .fact {
+        min-height: 96px;
+        padding: 13px;
+      }
+
+      .fact dd {
+        font-size: 15px;
+      }
+
+      .section {
+        padding: 68px 0;
+      }
+
+      .wrap {
+        width: calc(100% - 28px);
+        max-width: 1180px;
+      }
+
+      .mission-panel {
+        padding: 22px;
+      }
+
+      .mission-photo img {
+        min-height: 360px;
+      }
+
+      .flow-item {
+        grid-template-columns: 1fr;
+      }
+
+      .schedule-card {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav">
+      <a class="logo" href="#top" aria-label="FOX Learning Center">
+        <img src="assets/logos/logo_1.png" alt="FOX LC" />
+      </a>
+      <nav class="nav-links" aria-label="주요 메뉴">
+        <a href="#why">캠프 소개</a>
+        <a href="#video">활동 영상</a>
+        <a href="#activities">주요 활동</a>
+        <a href="#mission">K 미션</a>
+        <a href="#flow">하루 흐름</a>
+        <a href="#plan">일정</a>
+        <a href="#apply">모집 안내</a>
+      </nav>
+      <span class="btn btn-dark is-disabled" role="button" aria-disabled="true">
+        신청서 작성
+        <iconify-icon icon="solar:arrow-right-linear" width="18" aria-hidden="true"></iconify-icon>
+      </span>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="2026 FOX Global Camp in the USA">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <div class="eyebrow-row">
+            <span class="chip"><iconify-icon icon="solar:globus-bold" width="16" aria-hidden="true"></iconify-icon> 2026 FOX Global Camp in the USA</span>
+            <span class="chip"><iconify-icon icon="solar:stars-bold" width="16" aria-hidden="true"></iconify-icon> FOX Global Creator</span>
+          </div>
+          <h1 class="keep">FOX 글로벌 크리에이터<br />K(Korea)를 찾아라</h1>
+          <p class="hero-lead keep">
+            보스턴, 뉴욕, 워싱턴 D.C.에서 영어를 써보고, 대학과 기관을 방문하고, 미국 속 한국의 사람과 문화를 찾아 질문하고 기록하는 글로벌캠프입니다.
+          </p>
+          <div class="hero-actions">
+            <span class="btn btn-primary is-disabled" role="button" aria-disabled="true">
+              <iconify-icon icon="solar:clipboard-check-bold" width="20" aria-hidden="true"></iconify-icon>
+              신청서 작성
+            </span>
+            <span class="btn btn-light is-disabled" role="button" aria-disabled="true">
+              <iconify-icon icon="solar:card-bold" width="20" aria-hidden="true"></iconify-icon>
+              결제 바로가기
+            </span>
+          </div>
+          <dl class="quick-facts">
+            <div class="fact">
+              <dt>진행 기간</dt>
+              <dd class="keep">18박 20일</dd>
+            </div>
+            <div class="fact">
+              <dt>대상</dt>
+              <dd class="keep">초등 고학년~중등</dd>
+            </div>
+            <div class="fact">
+              <dt>주요 지역</dt>
+              <dd class="keep">보스턴·뉴욕<br />워싱턴 D.C.</dd>
+            </div>
+            <div class="fact">
+              <dt>주요 활동</dt>
+              <dd class="keep">영어·대학<br />K 미션</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section id="why" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-kicker"><iconify-icon icon="solar:compass-bold" width="18" aria-hidden="true"></iconify-icon> 캠프 소개</span>
+          <h2 class="keep">2026 FOX Global Camp 소개</h2>
+          <p class="section-lead keep">
+            FOX 글로벌캠프는 생활 영어 미션, 대학 탐방, MIT Museum·과학관 필드트립, 도시 문화 탐방, K(Korea)를 찾아라 미션을 함께 진행합니다.
+          </p>
+        </div>
+        <div class="care-note keep">
+          <iconify-icon icon="solar:shield-check-bold" width="28" aria-hidden="true"></iconify-icon>
+          <div>
+            <strong>출발부터 귀국까지 한국 연구원이 24시간 함께합니다.</strong>
+            <p>학생 안전을 관리하고, 학생과 학부모님 간 소통을 돕습니다.</p>
+          </div>
+        </div>
+        <div class="care-grid">
+          <article class="care-card">
+            <iconify-icon icon="solar:user-check-bold" width="30" aria-hidden="true"></iconify-icon>
+            <h3 class="keep">24시간 한국 연구원 동행</h3>
+            <p class="keep">출발, 이동, 활동, 귀국까지 FOX 연구원이 함께합니다.</p>
+          </article>
+          <article class="care-card">
+            <iconify-icon icon="solar:shield-check-bold" width="30" aria-hidden="true"></iconify-icon>
+            <h3 class="keep">학생 안전 관리</h3>
+            <p class="keep">일일 인원 점검, 이동 동선 공유, 비상 연락망을 운영합니다.</p>
+          </article>
+          <article class="care-card">
+            <iconify-icon icon="solar:chat-round-like-bold" width="30" aria-hidden="true"></iconify-icon>
+            <h3 class="keep">학부모 소통</h3>
+            <p class="keep">캠프 진행 상황과 학생 컨디션을 필요한 시점에 공유합니다.</p>
+          </article>
+          <article class="care-card">
+            <iconify-icon icon="solar:notebook-bold" width="30" aria-hidden="true"></iconify-icon>
+            <h3 class="keep">성장 리포트 제공</h3>
+            <p class="keep">질문, 표현 장면, 협업 장면을 연구원이 정리합니다.</p>
+          </article>
+        </div>
+        <div class="reason-grid">
+          <article class="reason-card">
+            <span class="reason-no">01</span>
+            <h3 class="keep">생활 영어 미션</h3>
+            <p class="keep">인사, 주문, 길 묻기, 자기소개, 인터뷰 질문, 리포팅 장면에서 영어를 써봅니다.</p>
+          </article>
+          <article class="reason-card">
+            <span class="reason-no">02</span>
+            <h3 class="keep">대학과 진로 탐색</h3>
+            <p class="keep">Harvard, MIT, Columbia 등 대학 탐방과 대학생 멘토 만남을 연결합니다.</p>
+          </article>
+          <article class="reason-card">
+            <span class="reason-no">03</span>
+            <h3 class="keep">MIT Museum·과학관 필드트립</h3>
+            <p class="keep">MIT Museum, 과학관, 항공우주 관련 박물관처럼 학생 그룹 방문이 가능한 곳을 확인해 일정에 반영합니다.</p>
+          </article>
+          <article class="reason-card">
+            <span class="reason-no">04</span>
+            <h3 class="keep">미국 문화 경험</h3>
+            <p class="keep">도시, 음식, 교통, 박물관, 공공장소를 방문하며 미국 생활문화를 살펴봅니다.</p>
+          </article>
+          <article class="reason-card">
+            <span class="reason-no">05</span>
+            <h3 class="keep">K(Korea)를 찾아라</h3>
+            <p class="keep">미국 속 한국의 사람, 음식, 문화, 학교, 일을 찾아 질문하고 기록합니다.</p>
+          </article>
+          <article class="reason-card">
+            <span class="reason-no">06</span>
+            <h3 class="keep">성장 리포트</h3>
+            <p class="keep">아이의 역할, 질문, 표현 장면, 협업 장면을 연구원이 정리해 공유합니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="video" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-kicker"><iconify-icon icon="solar:videocamera-record-bold" width="18" aria-hidden="true"></iconify-icon> 지난 미국캠프 활동 영상</span>
+          <h2 class="keep">지난 미국캠프 영상을<br /><span class="underline">확인하세요.</span></h2>
+          <p class="section-lead keep">
+            아래 영상을 클릭하면 YouTube에서 지난 미국캠프 활동을 볼 수 있습니다.
+          </p>
+        </div>
+        <div class="video-shell">
+          <a class="video-frame" href="https://youtu.be/Kek5253Ld0k?si=3CcCMTkpo02Tb7XK" target="_blank" rel="noopener" aria-label="FOX 미국캠프 활동 영상 보기">
+            <img src="https://img.youtube.com/vi/Kek5253Ld0k/maxresdefault.jpg" alt="FOX 미국캠프 활동 영상 썸네일" />
+            <span class="play-mark"><iconify-icon icon="solar:play-bold" width="38" aria-hidden="true"></iconify-icon></span>
+            <span class="video-caption">지난 미국캠프 활동 영상 보기</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="activities" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-kicker"><iconify-icon icon="solar:star-bold" width="18" aria-hidden="true"></iconify-icon> 주요 활동</span>
+          <h2 class="keep">캠프를 이루는<br /><span class="underline">6가지 경험</span></h2>
+          <p class="section-lead keep">
+            생활 영어, 대학 탐방, MIT Museum·과학관 필드트립, 도시 문화 탐방, K 미션, 성장 공유까지 진행합니다.
+          </p>
+        </div>
+        <div class="activity-grid">
+          <article class="activity-card">
+            <img src="assets/photos/fox-activity.jpg" alt="생활 영어 미션 활동" />
+            <h3 class="keep">생활 영어 미션</h3>
+            <p class="keep">식사 주문, 길 묻기, 자기소개, 인터뷰 질문, 리포팅에서 영어를 써봅니다.</p>
+          </article>
+          <article class="activity-card">
+            <img src="assets/photos/harvard-yard.jpg" alt="미국 대학 캠퍼스" />
+            <h3 class="keep">대학과 진로 탐색</h3>
+            <p class="keep">Harvard, MIT, Columbia 탐방과 대학생 멘토 만남을 통해 전공과 유학 질문을 준비합니다.</p>
+          </article>
+          <article class="activity-card">
+            <img src="assets/photos/mit-dome.jpg" alt="STEAM 필드트립" />
+            <h3 class="keep">MIT Museum·과학관 필드트립</h3>
+            <p class="keep">MIT Museum, 과학관, 항공우주 관련 박물관처럼 학생 그룹 방문이 가능한 곳에서 과학·기술 주제를 살펴봅니다.</p>
+          </article>
+          <article class="activity-card">
+            <img src="assets/photos/camp-aquarium.jpg" alt="생활 영어 미션과 STEAM 필드트립" />
+            <h3 class="keep">미국 문화 경험</h3>
+            <p class="keep">도시, 음식, 교통, 공공장소, 박물관을 경험하며 미국 생활문화를 살펴봅니다.</p>
+          </article>
+          <article class="activity-card">
+            <img src="assets/photos/group-tour.jpg" alt="K를 찾아라 팀 미션" />
+            <h3 class="keep">K(Korea)를 찾아라</h3>
+            <p class="keep">미국 속 한국의 사람, 음식, 문화, 학교, 일을 찾아 질문하고 촬영하고 기록합니다.</p>
+          </article>
+          <article class="activity-card">
+            <img src="assets/photos/camp-students.jpg" alt="성장 리포트 활동 기록" />
+            <h3 class="keep">성장 리포트</h3>
+            <p class="keep">아이의 역할, 질문, 참여 태도, 표현 장면, 협업 장면을 연구원이 정리해 공유합니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="mission" class="section cream">
+      <div class="wrap">
+        <div class="mission">
+          <div class="mission-panel">
+            <span class="section-kicker"><iconify-icon icon="solar:camera-bold" width="18" aria-hidden="true"></iconify-icon> 활동 미션</span>
+            <p class="mission-title keep">FOX Global Creator<br /><span class="underline">K(Korea)를 찾아라</span></p>
+            <p class="section-lead keep">
+              K(Korea)를 찾아라는 캠프 전체를 묶는 크리에이터 미션입니다. 아이들은 미국 속 한국의 사람, 음식, 문화, 학교, 일을 찾아 질문하고 촬영하고 기록합니다.
+            </p>
+            <ul class="role-list">
+              <li>
+                <span class="num">1</span>
+                <div>
+                  <strong>학교 속 K</strong>
+                  <span>미국 학교와 대학 안에서 한국과 연결된 사람과 이야기를 찾습니다.</span>
+                </div>
+              </li>
+              <li>
+                <span class="num">2</span>
+                <div>
+                  <strong>대학 속 K</strong>
+                  <span>대학생, 유학생, 한인학생회와 연결되는 질문을 준비합니다.</span>
+                </div>
+              </li>
+              <li>
+                <span class="num">3</span>
+                <div>
+                  <strong>일하는 K</strong>
+                  <span>미국에서 일하고 공부하는 한국인과 한인 커뮤니티 이야기를 살펴봅니다.</span>
+                </div>
+              </li>
+              <li>
+                <span class="num">4</span>
+                <div>
+                  <strong>음식 속 K</strong>
+                  <span>K-푸드, 한인타운, 한국 브랜드와 연결된 장면을 찾습니다.</span>
+                </div>
+              </li>
+              <li>
+                <span class="num">5</span>
+                <div>
+                  <strong>문화 속 K</strong>
+                  <span>미국 안에서 만나는 한국 문화, 콘텐츠, 언어 표현을 기록합니다.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="mission-photo">
+            <img src="assets/photos/fox-activity.jpg" alt="학생들이 팀별로 기록하며 활동하는 모습" />
+            <div class="mission-caption keep">
+              <strong>크리에이터 미션</strong>
+              <p>아이들은 질문하고, 촬영하고, 활동 기록장에 정리하며 팀 결과물을 만듭니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section alt">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-kicker"><iconify-icon icon="solar:route-bold" width="18" aria-hidden="true"></iconify-icon> 방문 지역</span>
+          <h2 class="keep">대학 탐방, STEAM 필드트립,<br />도시 문화 탐방을 위해<br />보스턴·뉴욕·워싱턴 D.C.를 방문합니다.</h2>
+          <p class="section-lead keep">
+            보스턴은 대학과 과학, 뉴욕은 도시 문화와 K 미션, 워싱턴 D.C.는 역사·과학·공공문화를 중심으로 방문합니다.
+          </p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card photo-card">
+            <img src="assets/photos/harvard-yard.jpg" alt="Harvard 캠퍼스 전경" />
+            <div class="body">
+              <span class="photo-label">BOSTON</span>
+              <h3 class="keep">대학 탐방과 캠퍼스 문화</h3>
+              <p class="keep">Harvard, MIT를 중심으로 대학 분위기, 학습 공간, 캠퍼스 문화를 관찰합니다.</p>
+            </div>
+          </article>
+          <article class="card photo-card">
+            <img src="assets/photos/nyc-skyline.jpg" alt="뉴욕 도시 전경" />
+            <div class="body">
+              <span class="photo-label">NEW YORK</span>
+              <h3 class="keep">도시 문화 탐방과 영어 미션</h3>
+              <p class="keep">랜드마크, 마켓, 공원, 거리에서 영어 표현과 도시 관찰 미션을 진행합니다.</p>
+            </div>
+          </article>
+          <article class="card photo-card">
+            <img src="assets/photos/washington-dc.jpg" alt="워싱턴 D.C. 전경" />
+            <div class="body">
+              <span class="photo-label">WASHINGTON D.C.</span>
+              <h3 class="keep">역사·과학·공공문화 탐방</h3>
+              <p class="keep">박물관과 도시 공간을 통해 미국의 역사, 과학, 공공문화를 살펴봅니다.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="flow" class="section dark">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-kicker"><iconify-icon icon="solar:clock-circle-bold" width="18" aria-hidden="true"></iconify-icon> 하루 활동 흐름</span>
+          <h2 class="keep">매일 영어로 준비하고,<br />방문지에서 써보고,<br />하루를 정리합니다.</h2>
+          <p class="section-lead keep">
+            오전 미션부터 오후 활동까지 영어 표현을 써봅니다. 저녁 회고 시간에는 한국어로 생각을 정리합니다.
+          </p>
+        </div>
+        <div class="flow">
+          <article class="flow-item">
+            <div class="flow-time">Morning</div>
+            <div>
+              <h3 class="keep">오늘의 표현, 질문 카드, 역할 준비</h3>
+              <p class="keep">방문지와 관련된 영어 표현, 질문 카드, 팀 역할을 준비합니다.</p>
+            </div>
+          </article>
+          <article class="flow-item">
+            <div class="flow-time">Daytime</div>
+            <div>
+              <h3 class="keep">대학·기관·문화 공간 방문</h3>
+              <p class="keep">식사 주문, 인사, 길 묻기, 자기소개, 인터뷰 질문, 리포팅 장면에서 영어를 써봅니다.</p>
+            </div>
+          </article>
+          <article class="flow-item">
+            <div class="flow-time">Creator Time</div>
+            <div>
+              <h3 class="keep">K를 찾아라 촬영·인터뷰·기록</h3>
+              <p class="keep">미국 속 한국과 연결된 사람, 음식, 브랜드, 학교, 문화 장면을 찾아 기록합니다.</p>
+            </div>
+          </article>
+          <article class="flow-item">
+            <div class="flow-time">Evening</div>
+            <div>
+              <h3 class="keep">하루 정리, 한국어 회고, 컨디션 확인</h3>
+              <p class="keep">오늘 발견한 내용을 정리하고, 컨디션을 확인한 뒤 학부모 공유 내용을 준비합니다.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="plan" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-kicker"><iconify-icon icon="solar:calendar-bold" width="18" aria-hidden="true"></iconify-icon> 캠프 일정</span>
+          <h2 class="keep">18박 20일 일정으로 진행합니다.</h2>
+          <p class="section-lead keep">
+            세부 방문 순서와 날짜별 일정은 항공, 대학, 기관 예약 일정에 맞춰 안내합니다.
+          </p>
+        </div>
+        <div class="schedule-card">
+          <div class="schedule-term keep">18박 20일</div>
+          <div>
+            <h3 class="keep">상세일정 추가중</h3>
+            <p class="keep">보스턴·뉴욕·워싱턴 D.C.를 중심으로 대학 탐방, STEAM 필드트립, 도시 문화 탐방, K 미션을 진행합니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="results" class="section alt">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-kicker"><iconify-icon icon="solar:notebook-bold" width="18" aria-hidden="true"></iconify-icon> 결과물</span>
+          <h2 class="keep">캠프 후 아이가 만든 결과물을<br />확인할 수 있습니다.</h2>
+        </div>
+        <div class="grid grid-4">
+          <article class="card pad">
+            <h3 class="keep">개인 활동 기록장</h3>
+            <p class="keep">방문지별 질문, 새로 알게 된 표현, 관찰 내용을 개인 기록으로 정리합니다.</p>
+          </article>
+          <article class="card pad">
+            <h3 class="keep">팀 영상 리포트</h3>
+            <p class="keep">팀별 역할을 바탕으로 미국에서 발견한 K 스토리를 영상 리포트로 만듭니다.</p>
+          </article>
+          <article class="card pad">
+            <h3 class="keep">캠프 리포트 발표</h3>
+            <p class="keep">대학, 도시, 문화 탐방 후 팀별 캠프 리포트를 발표합니다.</p>
+          </article>
+          <article class="card pad">
+            <h3 class="keep">성장 리포트</h3>
+            <p class="keep">아이의 역할, 질문, 참여 태도, 표현 장면, 협업 장면을 연구원이 정리해 학부모님께 공유합니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="apply" class="section cta">
+      <div class="wrap">
+        <div class="cta-box">
+          <span class="chip">모집 안내</span>
+          <h2 class="keep">2026 FOX Global Camp in the USA<br />모집 안내</h2>
+          <p class="section-lead keep">
+            보스턴, 뉴욕, 워싱턴 D.C.에서 대학 탐방, STEAM 필드트립, 도시 문화 탐방, 영어 미션을 경험하는 미국캠프입니다.
+          </p>
+          <div class="hero-actions">
+            <span class="btn btn-primary is-disabled" role="button" aria-disabled="true">
+              <iconify-icon icon="solar:clipboard-check-bold" width="20" aria-hidden="true"></iconify-icon>
+              신청서 작성
+            </span>
+            <span class="btn btn-light is-disabled" role="button" aria-disabled="true">
+              <iconify-icon icon="solar:card-bold" width="20" aria-hidden="true"></iconify-icon>
+              결제 바로가기
+            </span>
+          </div>
+          <div class="notice keep">
+            <iconify-icon icon="solar:phone-bold" width="22" aria-hidden="true"></iconify-icon>
+            <span>문의: 폭스러닝센터 1433-2700 / 카톡 FOX_LC</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div>
+        <img src="assets/logos/fox-lc.png" alt="FOX LC" />
+        <p class="keep">2026 FOX Global Camp in the USA<br />미국에서 보고, 영어로 묻고, 생각을 말하는 글로벌 활동 캠프.</p>
+      </div>
+      <div class="credits keep">
+        <p>문의: 폭스러닝센터 1433-2700 / 카톡 FOX_LC</p>
+        <p>
+          이미지 출처:
+          <a href="https://commons.wikimedia.org/wiki/File:The_New_York_City_Skyline_at_Dusk.jpg">NYC skyline, Bruce Emmerling</a>,
+          <a href="https://commons.wikimedia.org/wiki/File:2017_Maclaurin_Buildings_(MIT_Building_10)_and_Great_Dome.jpg">MIT, Beyond My Ken</a>,
+          <a href="https://commons.wikimedia.org/wiki/File:Harvard_Science_Center_from_the_Yard.jpg">Harvard, Rizka</a>,
+          <a href="https://commons.wikimedia.org/wiki/File:United_States_Capitol_west_front_edit2.jpg">U.S. Capitol, Martin Falbisoner</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

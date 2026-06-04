@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>2026 FOX Global Camp in the USA | Meet, Ask, Create</title>
-  <meta name="description" content="아이비리그·미국 동부 명문대 진로 탐색과 미국 문화 경험을 담은 2026 FOX Global Camp in the USA. 보스턴, 뉴욕, 워싱턴 D.C.에서 영어를 써보고, 질문하고, 기록하는 글로벌 크리에이터 캠프입니다." />
+  <meta name="description" content="아이비리그·미국 동부 명문대 진로 탐색, 진로 Q&A, 보스턴·뉴욕 문화 경험, 코리아타운 UCC 미션을 담은 2026 FOX Global Camp in the USA." />
   <meta property="og:title" content="2026 FOX Global Camp in the USA" />
-  <meta property="og:description" content="미국에서 보고, 영어로 묻고, 생각을 말하다. FOX 글로벌 활동 캠프." />
+  <meta property="og:description" content="보스턴과 뉴욕에서 만나고, 질문하고, UCC로 만들어보는 FOX 글로벌캠프." />
   <script src="https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js"></script>
   <style>
     :root {
@@ -584,13 +584,13 @@
     }
 
     .video-shell {
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
-      gap: 24px;
-      align-items: stretch;
+      max-width: 1080px;
+      margin: 0 auto;
     }
 
     .video-frame {
+      display: block;
+      width: 100%;
       position: relative;
       overflow: hidden;
       border-radius: var(--radius);
@@ -646,80 +646,6 @@
       color: var(--white);
       font-weight: 900;
       backdrop-filter: blur(10px);
-    }
-
-    .video-side {
-      padding: 24px;
-      border-radius: var(--radius);
-      background: var(--ink);
-      color: var(--white);
-      box-shadow: var(--soft);
-    }
-
-    .video-side h3 {
-      margin-bottom: 12px;
-      color: var(--white);
-      font-size: 24px;
-      line-height: 1.3;
-      font-weight: 950;
-    }
-
-    .video-side p {
-      margin-bottom: 16px;
-      color: rgba(255, 255, 255, 0.78);
-      font-weight: 700;
-    }
-
-    .video-side p:last-child {
-      margin-bottom: 0;
-    }
-
-    .video-thumb-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-      margin: 18px 0;
-    }
-
-    .video-thumb-grid img {
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
-      border-radius: var(--radius);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-    }
-
-    .activity-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px 26px;
-    }
-
-    .activity-card img {
-      width: 100%;
-      aspect-ratio: 16 / 10;
-      object-fit: cover;
-      border-radius: var(--radius);
-      box-shadow: var(--soft);
-      background: #dfe7ef;
-    }
-
-    .activity-card h3 {
-      margin: 14px 0 6px;
-      text-align: center;
-      color: var(--ink);
-      font-size: 22px;
-      line-height: 1.35;
-      font-weight: 950;
-    }
-
-    .activity-card p {
-      margin: 0;
-      text-align: center;
-      color: #33435a;
-      font-size: 16px;
-      font-weight: 750;
-      line-height: 1.55;
     }
 
     .photo-label {
@@ -979,10 +905,6 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      .video-shell {
-        grid-template-columns: 1fr;
-      }
-
       .grid-3 {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -1063,11 +985,9 @@
         grid-template-columns: 1fr;
       }
 
-      .video-shell,
       .reason-grid,
       .concept-grid,
-      .care-grid,
-      .activity-grid {
+      .care-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1124,8 +1044,7 @@
       <nav class="nav-links" aria-label="주요 메뉴">
         <a href="#why">캠프 소개</a>
         <a href="#video">활동 영상</a>
-        <a href="#activities">주요 활동</a>
-        <a href="#mission">K 미션</a>
+        <a href="#mission">코리아타운 미션</a>
         <a href="#flow">하루 흐름</a>
         <a href="#plan">일정</a>
         <a href="#apply">모집 안내</a>
@@ -1143,11 +1062,11 @@
         <div class="hero-copy">
           <div class="eyebrow-row">
             <span class="chip"><iconify-icon icon="solar:globus-bold" width="16" aria-hidden="true"></iconify-icon> 2026 FOX Global Camp in the USA</span>
-            <span class="chip"><iconify-icon icon="solar:stars-bold" width="16" aria-hidden="true"></iconify-icon> FOX Global Creator</span>
+            <span class="chip"><iconify-icon icon="solar:stars-bold" width="16" aria-hidden="true"></iconify-icon> Ivy League Career Q&A</span>
           </div>
           <h1 class="keep">FOX Global Camp<br />in the USA<br /><span class="hero-accent">Meet, Ask, Create</span></h1>
           <p class="hero-lead keep">
-            아이비리그·미국 동부 명문대 진로 탐색과 미국 문화 경험을 담은 FOX 글로벌 크리에이터 캠프입니다. 보스턴, 뉴욕, 워싱턴 D.C.에서 영어를 써보고, 질문하고, 촬영하고, 기록합니다.
+            아이비리그·미국 동부 명문대 진로 탐색, 대학생·유학생·한인학생회 진로 Q&A, 보스턴·뉴욕 문화 경험을 담은 FOX 글로벌캠프입니다. 보스턴과 뉴욕에서 만나고, 질문하고, UCC로 만들어보는 18박 20일입니다.
           </p>
           <div class="hero-actions">
             <span class="btn btn-primary is-disabled" role="button" aria-disabled="true">
@@ -1170,11 +1089,11 @@
             </div>
             <div class="fact">
               <dt>주요 지역</dt>
-              <dd class="keep">보스턴·뉴욕<br />워싱턴 D.C.</dd>
+              <dd class="keep">보스턴·뉴욕</dd>
             </div>
             <div class="fact">
               <dt>주요 활동</dt>
-              <dd class="keep">영어·대학<br />문화·K 미션</dd>
+              <dd class="keep">진로 Q&A<br />필드트립·UCC</dd>
             </div>
           </dl>
         </div>
@@ -1187,7 +1106,7 @@
           <span class="section-kicker"><iconify-icon icon="solar:compass-bold" width="18" aria-hidden="true"></iconify-icon> 캠프 소개</span>
           <h2 class="keep">2026 FOX Global Camp 소개</h2>
           <p class="section-lead keep">
-            FOX 글로벌캠프는 미국 동부에서 영어, 대학, 진로, 문화, 팀 프로젝트를 함께 경험하는 캠프입니다.
+            FOX 글로벌캠프는 미국 동부에서 영어, 대학 진로 탐색, 진로 Q&A, 문화 필드트립, 코리아타운 UCC 미션을 함께 경험하는 캠프입니다.
           </p>
         </div>
         <div class="care-grid">
@@ -1199,7 +1118,7 @@
           <article class="care-card">
             <iconify-icon icon="solar:chat-round-line-bold" width="30" aria-hidden="true"></iconify-icon>
             <h3 class="keep">English Only Policy</h3>
-            <p class="keep">정규 활동 시간에는 영어 표현을 생활 장면에서 써보도록 운영합니다.</p>
+            <p class="keep">정규 활동 시간에는 영어 표현을 생활 장면에서 사용하도록 운영합니다.</p>
           </article>
           <article class="care-card">
             <iconify-icon icon="solar:shield-check-bold" width="30" aria-hidden="true"></iconify-icon>
@@ -1215,15 +1134,15 @@
         <div class="concept-grid">
           <article class="concept-card">
             <strong>Meet</strong>
-            <p class="keep">아이비리그·미국 동부 명문대 캠퍼스, 박물관, 과학관, 도시 공간, K 문화 공간을 만납니다.</p>
+            <p class="keep">아이비리그·동부 명문대 캠퍼스, 보스턴·뉴욕 도시 공간, 박물관·과학관·예술관 필드트립을 만납니다.</p>
           </article>
           <article class="concept-card">
             <strong>Ask</strong>
-            <p class="keep">식사 주문, 길 묻기, 캠퍼스 질문, 박물관 질문, K 미션 질문을 영어로 준비하고 써봅니다.</p>
+            <p class="keep">대학생·유학생·한인학생회와 진로 Q&A를 진행하고, 캠퍼스·필드트립·코리아타운에서 영어 질문을 사용합니다.</p>
           </article>
           <article class="concept-card">
             <strong>Create</strong>
-            <p class="keep">개인 활동 기록장, 팀 영상 리포트, 캠프 리포트, 성장 포트폴리오로 캠프 경험을 정리합니다.</p>
+            <p class="keep">팀별 UCC를 제작합니다. 활동 기록장, 캠프 리포트, 성장 포트폴리오는 UCC 제작과 캠프 기록을 돕는 자료로 정리합니다.</p>
           </article>
         </div>
         <div class="reason-grid">
@@ -1232,23 +1151,23 @@
             <div class="reason-body">
               <span class="reason-no">01</span>
               <h3 class="keep">생활 영어 미션</h3>
-              <p class="keep">식사 주문, 길 묻기, 자기소개, 방문지 질문 카드로 영어 표현을 써봅니다.</p>
+              <p class="keep">식사 주문, 길 묻기, 자기소개, 방문지 질문 카드로 영어 표현을 연습합니다.</p>
             </div>
           </article>
           <article class="reason-card">
             <img class="reason-photo" src="assets/photos/intro-university-career.jpg" alt="대학과 진로 탐색" />
             <div class="reason-body">
               <span class="reason-no">02</span>
-              <h3 class="keep">아이비리그·동부 명문대 진로 탐색</h3>
-              <p class="keep">Harvard, MIT, Columbia 등 대학 캠퍼스를 방문하며 학습 공간과 캠퍼스 분위기를 살펴봅니다.</p>
+              <h3 class="keep">아이비리그·동부 명문대 진로 Q&A</h3>
+              <p class="keep">Harvard, MIT, Columbia 등 대학 캠퍼스를 방문하고 대학생·유학생·한인학생회와 진로 질문을 나눕니다.</p>
             </div>
           </article>
           <article class="reason-card">
-            <img class="reason-photo" src="assets/photos/intro-mit-museum-fieldtrip.jpg" alt="MIT Museum과 과학관 필드트립" />
+            <img class="reason-photo" src="assets/photos/intro-mit-museum-fieldtrip.jpg" alt="박물관과 과학관 필드트립" />
             <div class="reason-body">
               <span class="reason-no">03</span>
-              <h3 class="keep">MIT Museum·과학관 필드트립</h3>
-              <p class="keep">MIT Museum, 과학관, 항공우주 관련 박물관을 중심으로 과학과 기술 주제를 질문으로 연결합니다.</p>
+              <h3 class="keep">박물관·과학관·예술관 필드트립</h3>
+              <p class="keep">박물관, 과학관, 예술관을 방문하며 과학·기술·문화예술 주제를 질문으로 연결합니다.</p>
             </div>
           </article>
           <article class="reason-card">
@@ -1256,23 +1175,23 @@
             <div class="reason-body">
               <span class="reason-no">04</span>
               <h3 class="keep">미국 문화 경험</h3>
-              <p class="keep">뉴욕과 워싱턴 D.C.의 박물관, 공공장소, 도시 공간, 공원, 쇼핑몰을 방문합니다.</p>
+              <p class="keep">보스턴과 뉴욕의 공원, 마켓, 거리, 쇼핑몰, 문화예술 공간을 방문합니다.</p>
             </div>
           </article>
           <article class="reason-card">
-            <img class="reason-photo" src="assets/photos/intro-k-mission.jpg" alt="K를 찾아라 미션" />
+            <img class="reason-photo" src="assets/photos/intro-k-mission.jpg" alt="코리아타운을 찾아라 미션" />
             <div class="reason-body">
               <span class="reason-no">05</span>
-              <h3 class="keep">K(Korea)를 찾아라</h3>
-              <p class="keep">미국 속 한국의 음식, 문화, 브랜드, 언어 표현, 사람의 이야기를 찾아 질문하고 기록합니다.</p>
+              <h3 class="keep">코리아타운을 찾아라</h3>
+              <p class="keep">뉴욕 코리아타운과 K-푸드, 한국 브랜드, 한국 문화 공간을 찾아 질문하고 촬영합니다.</p>
             </div>
           </article>
           <article class="reason-card">
             <img class="reason-photo" src="assets/photos/intro-growth-report.jpg" alt="성장 포트폴리오" />
             <div class="reason-body">
               <span class="reason-no">06</span>
-              <h3 class="keep">캠프 결과물</h3>
-              <p class="keep">개인 활동 기록장, 팀 영상 리포트, 캠프 리포트, 성장 포트폴리오로 경험을 정리합니다.</p>
+              <h3 class="keep">팀 UCC 결과물</h3>
+              <p class="keep">만나고 질문한 내용을 팀별 UCC로 제작합니다.</p>
             </div>
           </article>
         </div>
@@ -1285,7 +1204,7 @@
           <span class="section-kicker"><iconify-icon icon="solar:videocamera-record-bold" width="18" aria-hidden="true"></iconify-icon> 지난 이야기</span>
           <h2 class="keep">폭스가 함께해 온<br /><span class="underline">글로벌 교류의 발자취</span></h2>
           <p class="section-lead keep">
-            2026 글로벌캠프 이전에도 폭스는 다양한 글로벌 교류를 진행해 왔습니다. 지난 캠프 현장을 영상과 사진으로 만나보세요.
+            2026 글로벌캠프 이전에도 폭스는 다양한 글로벌 교류를 진행해 왔습니다. 지난 캠프 현장을 영상으로 만나보세요.
           </p>
         </div>
         <div class="video-shell">
@@ -1294,59 +1213,6 @@
             <span class="play-mark"><iconify-icon icon="solar:play-bold" width="38" aria-hidden="true"></iconify-icon></span>
             <span class="video-caption">지난 미국캠프 활동 영상 보기</span>
           </a>
-          <aside class="video-side">
-            <h3 class="keep">지난 캠프 현장 기록</h3>
-            <p class="keep">폭스는 해외 캠프와 글로벌 교류를 통해 아이들이 낯선 공간에서 보고, 묻고, 표현하는 경험을 쌓아 왔습니다.</p>
-            <div class="video-thumb-grid" aria-label="지난 캠프 사진">
-              <img src="assets/photos/group-tour.jpg" alt="지난 캠프 단체 활동 사진" />
-              <img src="assets/photos/camp-students.jpg" alt="지난 캠프 참여 학생 사진" />
-            </div>
-            <p class="keep">2026 미국캠프는 이 흐름을 이어받아 Meet, Ask, Create로 진행합니다.</p>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <section id="activities" class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="section-kicker"><iconify-icon icon="solar:star-bold" width="18" aria-hidden="true"></iconify-icon> 주요 활동</span>
-          <h2 class="keep">캠프를 이루는<br /><span class="underline">6가지 경험</span></h2>
-          <p class="section-lead keep">
-            영어 사용, 아이비리그·미국 동부 명문대 진로 탐색, STEAM 필드트립, 미국 문화 경험, K 미션, 결과물 제작까지 진행합니다.
-          </p>
-        </div>
-        <div class="activity-grid">
-          <article class="activity-card">
-            <img src="assets/photos/fox-activity.jpg" alt="생활 영어 미션 활동" />
-            <h3 class="keep">생활 영어 미션</h3>
-            <p class="keep">식사 주문, 길 묻기, 자기소개, 방문지 질문 카드로 영어 표현을 써봅니다.</p>
-          </article>
-          <article class="activity-card">
-            <img src="assets/photos/harvard-yard.jpg" alt="미국 대학 캠퍼스" />
-            <h3 class="keep">아이비리그·동부 명문대 진로 탐색</h3>
-            <p class="keep">Harvard, MIT, Columbia 등 대학 캠퍼스를 방문하고 학습 공간과 분위기를 살펴봅니다.</p>
-          </article>
-          <article class="activity-card">
-            <img src="assets/photos/mit-dome.jpg" alt="STEAM 필드트립" />
-            <h3 class="keep">MIT Museum·과학관 필드트립</h3>
-            <p class="keep">MIT Museum, 과학관, 항공우주 관련 박물관에서 과학과 기술 주제를 질문으로 연결합니다.</p>
-          </article>
-          <article class="activity-card">
-            <img src="assets/photos/camp-aquarium.jpg" alt="생활 영어 미션과 STEAM 필드트립" />
-            <h3 class="keep">미국 문화 경험</h3>
-            <p class="keep">뉴욕과 워싱턴 D.C.의 박물관, 공공장소, 도시 공간, 공원, 쇼핑몰을 방문합니다.</p>
-          </article>
-          <article class="activity-card">
-            <img src="assets/photos/group-tour.jpg" alt="K를 찾아라 팀 미션" />
-            <h3 class="keep">K(Korea)를 찾아라</h3>
-            <p class="keep">미국 속 한국의 음식, 문화, 브랜드, 언어 표현, 사람의 이야기를 찾아 질문하고 촬영하고 기록합니다.</p>
-          </article>
-          <article class="activity-card">
-            <img src="assets/photos/camp-students.jpg" alt="성장 포트폴리오 활동 기록" />
-            <h3 class="keep">캠프 결과물</h3>
-            <p class="keep">개인 활동 기록장, 팀 영상 리포트, 캠프 리포트, 성장 포트폴리오로 경험을 정리합니다.</p>
-          </article>
         </div>
       </div>
     </section>
@@ -1356,44 +1222,44 @@
         <div class="mission">
           <div class="mission-panel">
             <span class="section-kicker"><iconify-icon icon="solar:camera-bold" width="18" aria-hidden="true"></iconify-icon> 활동 미션</span>
-            <p class="mission-title keep">FOX Global Creator<br /><span class="underline">K(Korea)를 찾아라</span></p>
+            <p class="mission-title keep">FOX UCC Mission<br /><span class="underline">코리아타운을 찾아라</span></p>
             <p class="section-lead keep">
-              K(Korea)를 찾아라는 캠프 안에서 진행되는 대표 미션입니다. 아이들은 팀별 역할을 나누고 미국 속 한국의 음식, 문화, 브랜드, 언어 표현, 사람의 이야기를 찾아 질문하고 촬영하고 기록합니다.
+              코리아타운을 찾아라는 보스턴·뉴욕에서 진행하는 대표 UCC 미션입니다. 팀별로 K-푸드, 한국 브랜드, 한국 문화 공간, 사람의 이야기를 찾아 질문하고 촬영해 UCC로 만듭니다.
             </p>
             <ul class="role-list">
               <li>
                 <span class="num">1</span>
                 <div>
-                  <strong>학교 속 K</strong>
-                  <span>미국 학교와 대학 안에서 한국과 연결된 사람과 이야기를 찾습니다.</span>
+                  <strong>코리아타운 장면 찾기</strong>
+                  <span>뉴욕 코리아타운, K-푸드, 한국 브랜드와 연결된 장면을 찾습니다.</span>
                 </div>
               </li>
               <li>
                 <span class="num">2</span>
                 <div>
-                  <strong>대학 속 K</strong>
-                  <span>대학생, 유학생, 한인학생회와 연결되는 질문을 준비합니다.</span>
+                  <strong>진로 Q&A 질문 준비</strong>
+                  <span>대학생, 유학생, 한인학생회와 나눌 진로 질문을 팀별로 준비합니다.</span>
                 </div>
               </li>
               <li>
                 <span class="num">3</span>
                 <div>
-                  <strong>일하는 K</strong>
-                  <span>미국에서 일하고 공부하는 한국인과 한인 커뮤니티 이야기를 살펴봅니다.</span>
+                  <strong>사람의 이야기 듣기</strong>
+                  <span>미국에서 공부하고 일하는 한국인의 경험과 선택을 듣습니다.</span>
                 </div>
               </li>
               <li>
                 <span class="num">4</span>
                 <div>
-                  <strong>음식 속 K</strong>
-                  <span>K-푸드, 한인타운, 한국 브랜드와 연결된 장면을 찾습니다.</span>
+                  <strong>팀 촬영 역할 나누기</strong>
+                  <span>진행자, 리포터, 촬영, 작가 역할로 장면과 질문을 기록합니다.</span>
                 </div>
               </li>
               <li>
                 <span class="num">5</span>
                 <div>
-                  <strong>문화 속 K</strong>
-                  <span>미국 안에서 만나는 한국 문화, 콘텐츠, 언어 표현을 기록합니다.</span>
+                  <strong>팀 UCC 제작</strong>
+                  <span>만나고 질문한 내용을 하나의 UCC로 완성합니다.</span>
                 </div>
               </li>
             </ul>
@@ -1401,8 +1267,8 @@
           <div class="mission-photo">
             <img src="assets/photos/fox-activity.jpg" alt="학생들이 팀별로 기록하며 활동하는 모습" />
             <div class="mission-caption keep">
-              <strong>크리에이터 미션</strong>
-              <p>아이들은 질문하고, 촬영하고, 활동 기록장에 정리하며 팀 결과물을 만듭니다.</p>
+              <strong>팀 UCC 제작</strong>
+              <p>만나고 질문한 내용을 촬영해 팀 UCC로 만듭니다.</p>
             </div>
           </div>
         </div>
@@ -1413,34 +1279,26 @@
       <div class="wrap">
         <div class="section-head">
           <span class="section-kicker"><iconify-icon icon="solar:route-bold" width="18" aria-hidden="true"></iconify-icon> 방문 지역</span>
-          <h2 class="keep">아이비리그·동부 명문대,<br />STEAM 필드트립,<br />미국 문화 경험을 위해<br />보스턴·뉴욕·워싱턴 D.C.를 방문합니다.</h2>
+          <h2 class="keep">아이비리그·동부 명문대 진로 Q&A,<br />필드트립, 코리아타운 UCC 미션을 위해<br />보스턴과 뉴욕을 방문합니다.</h2>
           <p class="section-lead keep">
-            보스턴은 대학과 과학, 뉴욕은 도시 문화와 K 미션, 워싱턴 D.C.는 역사·과학·공공문화 탐방을 중심으로 살펴봅니다.
+            보스턴은 대학과 과학·문화 필드트립, 뉴욕은 도시 문화와 코리아타운 UCC 미션을 중심으로 살펴봅니다.
           </p>
         </div>
-        <div class="grid grid-3">
+        <div class="grid grid-2">
           <article class="card photo-card">
             <img src="assets/photos/harvard-yard.jpg" alt="Harvard 캠퍼스 전경" />
             <div class="body">
               <span class="photo-label">BOSTON</span>
-              <h3 class="keep">대학 탐방과 캠퍼스 문화</h3>
-              <p class="keep">Harvard, MIT를 중심으로 대학 분위기, 학습 공간, 캠퍼스 문화를 관찰하고 대학 질문 카드를 준비합니다.</p>
+              <h3 class="keep">대학 탐방과 진로 Q&A</h3>
+              <p class="keep">Harvard, MIT를 중심으로 대학 분위기와 학습 공간을 살펴보고 대학생·유학생·한인학생회와의 진로 Q&A를 진행합니다.</p>
             </div>
           </article>
           <article class="card photo-card">
             <img src="assets/photos/nyc-skyline.jpg" alt="뉴욕 도시 전경" />
             <div class="body">
               <span class="photo-label">NEW YORK</span>
-              <h3 class="keep">도시 문화 탐방과 영어 미션</h3>
-              <p class="keep">랜드마크, 마켓, 공원, 거리에서 영어 표현과 도시 관찰 미션을 진행합니다.</p>
-            </div>
-          </article>
-          <article class="card photo-card">
-            <img src="assets/photos/washington-dc.jpg" alt="워싱턴 D.C. 전경" />
-            <div class="body">
-              <span class="photo-label">WASHINGTON D.C.</span>
-              <h3 class="keep">역사·과학·공공문화 탐방</h3>
-              <p class="keep">박물관과 도시 공간을 통해 미국의 역사, 과학, 공공문화와 예술을 살펴봅니다.</p>
+              <h3 class="keep">도시 문화 탐방과 코리아타운 미션</h3>
+              <p class="keep">Columbia 캠퍼스, 코리아타운, 마켓, 공원, 예술 공간에서 영어 질문과 UCC 촬영 미션을 진행합니다.</p>
             </div>
           </article>
         </div>
@@ -1451,9 +1309,9 @@
       <div class="wrap">
         <div class="section-head">
           <span class="section-kicker"><iconify-icon icon="solar:clock-circle-bold" width="18" aria-hidden="true"></iconify-icon> 하루 활동 흐름</span>
-          <h2 class="keep">매일 영어로 준비하고,<br />방문지에서 써보고,<br />하루를 정리합니다.</h2>
+          <h2 class="keep">매일 영어로 준비하고,<br />사람을 만나 질문하고,<br />UCC로 정리합니다.</h2>
           <p class="section-lead keep">
-            정규 활동 시간에는 English Only Policy를 적용해 영어 표현을 써봅니다. 저녁 회고 시간에는 한국어로 생각을 정리합니다.
+            정규 활동 시간에는 English Only Policy를 적용해 영어 표현을 사용합니다. 저녁 회고 시간에는 한국어로 생각을 정리합니다.
           </p>
         </div>
         <div class="flow">
@@ -1467,15 +1325,15 @@
           <article class="flow-item">
             <div class="flow-time">Daytime</div>
             <div>
-              <h3 class="keep">대학·기관·문화 공간 방문</h3>
-              <p class="keep">식사 주문, 인사, 길 묻기, 자기소개, 방문지 질문, 리포팅 장면에서 영어를 써봅니다.</p>
+              <h3 class="keep">대학·필드트립·문화 공간 방문</h3>
+              <p class="keep">식사 주문, 인사, 길 묻기, 자기소개, 방문지 질문, 리포팅 장면에서 영어를 사용합니다.</p>
             </div>
           </article>
           <article class="flow-item">
             <div class="flow-time">Creator Time</div>
             <div>
-              <h3 class="keep">K를 찾아라 촬영·인터뷰·기록</h3>
-              <p class="keep">미국 속 한국과 연결된 음식, 브랜드, 학교, 문화 장면을 찾아 질문하고 기록합니다.</p>
+              <h3 class="keep">코리아타운을 찾아라 UCC 촬영</h3>
+              <p class="keep">K-푸드, 한국 브랜드, 한국 문화 공간, 사람의 이야기를 찾아 질문하고 촬영합니다.</p>
             </div>
           </article>
           <article class="flow-item">
@@ -1502,7 +1360,7 @@
           <div class="schedule-term keep">18박 20일</div>
           <div>
             <h3 class="keep">상세일정 추가중</h3>
-            <p class="keep">보스턴·뉴욕·워싱턴 D.C.를 중심으로 대학 탐방, STEAM 필드트립, 도시 문화 탐방, K 미션을 진행합니다.</p>
+            <p class="keep">보스턴·뉴욕을 중심으로 대학 탐방, 진로 Q&A, 필드트립, 도시 문화 탐방, 코리아타운 UCC 미션을 진행합니다.</p>
           </div>
         </div>
         <div class="care-note keep">
@@ -1519,24 +1377,27 @@
       <div class="wrap">
         <div class="section-head">
           <span class="section-kicker"><iconify-icon icon="solar:notebook-bold" width="18" aria-hidden="true"></iconify-icon> 결과물</span>
-          <h2 class="keep">캠프 후 아이가 만든 결과물과<br />성장 포트폴리오를 확인할 수 있습니다.</h2>
+          <h2 class="keep">핵심 결과물은<br />팀 UCC입니다.</h2>
+          <p class="section-lead keep">
+            활동 기록장, 캠프 리포트, 성장 포트폴리오는 UCC 제작과 캠프 기록을 돕는 자료로 정리합니다.
+          </p>
         </div>
         <div class="grid grid-4">
           <article class="card pad">
-            <h3 class="keep">개인 활동 기록장</h3>
-            <p class="keep">방문지별 질문, 새로 알게 된 표현, 관찰 내용을 개인 기록으로 정리합니다.</p>
+            <h3 class="keep">팀 UCC</h3>
+            <p class="keep">만나고 질문한 내용을 팀 영상으로 완성합니다.</p>
           </article>
           <article class="card pad">
-            <h3 class="keep">팀 영상 리포트</h3>
-            <p class="keep">팀별 역할을 바탕으로 미국에서 발견한 K 스토리를 영상 리포트로 만듭니다.</p>
+            <h3 class="keep">활동 기록장</h3>
+            <p class="keep">질문, 답변, 촬영 내용을 정리합니다.</p>
           </article>
           <article class="card pad">
-            <h3 class="keep">캠프 리포트 발표</h3>
-            <p class="keep">대학, 도시, 문화 탐방 후 팀별 캠프 리포트를 발표합니다.</p>
+            <h3 class="keep">캠프 리포트</h3>
+            <p class="keep">주요 활동과 팀 미션을 요약합니다.</p>
           </article>
           <article class="card pad">
             <h3 class="keep">성장 포트폴리오</h3>
-            <p class="keep">아이의 역할, 질문, 참여 태도, 표현 장면, 협업 장면, 연구원 관찰 내용을 정리합니다.</p>
+            <p class="keep">역할, 질문, 참여 태도, 협업 장면을 정리합니다.</p>
           </article>
         </div>
       </div>
@@ -1548,7 +1409,7 @@
           <span class="chip">모집 안내</span>
           <h2 class="keep">2026 FOX Global Camp in the USA<br />모집 안내</h2>
           <p class="section-lead keep">
-            보스턴, 뉴욕, 워싱턴 D.C.에서 영어를 써보고, 아이비리그·미국 동부 명문대 캠퍼스를 만나고, 미국 문화와 기관 프로그램을 경험하는 미국캠프입니다.
+            보스턴과 뉴욕에서 대학 진로 탐색, 진로 Q&A, 필드트립, 도시 문화 탐방, 코리아타운 UCC 미션을 경험하는 미국캠프입니다.
           </p>
           <div class="hero-actions">
             <span class="btn btn-primary is-disabled" role="button" aria-disabled="true">
@@ -1581,8 +1442,7 @@
           이미지 출처:
           <a href="https://commons.wikimedia.org/wiki/File:The_New_York_City_Skyline_at_Dusk.jpg">NYC skyline, Bruce Emmerling</a>,
           <a href="https://commons.wikimedia.org/wiki/File:2017_Maclaurin_Buildings_(MIT_Building_10)_and_Great_Dome.jpg">MIT, Beyond My Ken</a>,
-          <a href="https://commons.wikimedia.org/wiki/File:Harvard_Science_Center_from_the_Yard.jpg">Harvard, Rizka</a>,
-          <a href="https://commons.wikimedia.org/wiki/File:United_States_Capitol_west_front_edit2.jpg">U.S. Capitol, Martin Falbisoner</a>
+          <a href="https://commons.wikimedia.org/wiki/File:Harvard_Science_Center_from_the_Yard.jpg">Harvard, Rizka</a>
         </p>
       </div>
     </div>

@@ -572,6 +572,25 @@
       font-weight: 650;
     }
 
+    .operation-head {
+      margin: 34px 0 16px;
+    }
+
+    .operation-head h3 {
+      margin-bottom: 6px;
+      color: var(--ink);
+      font-size: 28px;
+      line-height: 1.25;
+      font-weight: 950;
+    }
+
+    .operation-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+      font-weight: 700;
+    }
+
     .photo-card img {
       width: 100%;
       aspect-ratio: 16 / 10;
@@ -1043,10 +1062,11 @@
       </a>
       <nav class="nav-links" aria-label="주요 메뉴">
         <a href="#why">캠프 소개</a>
+        <a href="#activities">주요 일정</a>
         <a href="#video">활동 영상</a>
         <a href="#mission">코리아타운 미션</a>
         <a href="#flow">하루 흐름</a>
-        <a href="#plan">일정</a>
+        <a href="#plan">상세 일정</a>
         <a href="#apply">모집 안내</a>
       </nav>
       <span class="btn btn-dark is-disabled" role="button" aria-disabled="true">
@@ -1109,28 +1129,6 @@
             FOX 글로벌캠프는 미국 동부에서 영어, 대학 진로 탐색, 진로 Q&A, 문화 필드트립, 코리아타운 UCC 미션을 함께 경험하는 캠프입니다.
           </p>
         </div>
-        <div class="care-grid">
-          <article class="care-card">
-            <iconify-icon icon="solar:user-check-bold" width="30" aria-hidden="true"></iconify-icon>
-            <h3 class="keep">24시간 한국 연구원 동행</h3>
-            <p class="keep">출발, 이동, 활동, 귀국까지 FOX 연구원이 함께하며 안전과 생활을 관리합니다.</p>
-          </article>
-          <article class="care-card">
-            <iconify-icon icon="solar:chat-round-line-bold" width="30" aria-hidden="true"></iconify-icon>
-            <h3 class="keep">English Only Policy</h3>
-            <p class="keep">정규 활동 시간에는 영어 표현을 생활 장면에서 사용하도록 운영합니다.</p>
-          </article>
-          <article class="care-card">
-            <iconify-icon icon="solar:shield-check-bold" width="30" aria-hidden="true"></iconify-icon>
-            <h3 class="keep">학생 안전 관리</h3>
-            <p class="keep">일일 인원 점검, 이동 동선 공유, 비상 연락망을 운영합니다.</p>
-          </article>
-          <article class="care-card">
-            <iconify-icon icon="solar:notebook-bold" width="30" aria-hidden="true"></iconify-icon>
-            <h3 class="keep">성장 포트폴리오</h3>
-            <p class="keep">질문, 표현 장면, 협업 장면, 연구원 관찰 내용을 정리합니다.</p>
-          </article>
-        </div>
         <div class="concept-grid">
           <article class="concept-card">
             <strong>Meet</strong>
@@ -1144,6 +1142,18 @@
             <strong>Create</strong>
             <p class="keep">팀별 UCC를 제작합니다. 활동 기록장, 캠프 리포트, 성장 포트폴리오는 UCC 제작과 캠프 기록을 돕는 자료로 정리합니다.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="activities" class="section alt">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-kicker"><iconify-icon icon="solar:calendar-mark-bold" width="18" aria-hidden="true"></iconify-icon> 주요 일정</span>
+          <h2 class="keep">18박 20일 동안 진행하는<br /><span class="underline">주요 활동 일정</span>입니다.</h2>
+          <p class="section-lead keep">
+            상세 방문 순서와 날짜는 항공, 대학, 기관 예약 일정에 맞춰 안내합니다.
+          </p>
         </div>
         <div class="reason-grid">
           <article class="reason-card">
@@ -1193,6 +1203,32 @@
               <h3 class="keep">팀 UCC 결과물</h3>
               <p class="keep">만나고 질문한 내용을 팀별 UCC로 제작합니다.</p>
             </div>
+          </article>
+        </div>
+        <div class="operation-head">
+          <h3 class="keep">운영 기준</h3>
+          <p class="keep">학생 안전과 생활 관리는 아래 기준으로 함께 운영합니다.</p>
+        </div>
+        <div class="care-grid">
+          <article class="care-card">
+            <iconify-icon icon="solar:user-check-bold" width="30" aria-hidden="true"></iconify-icon>
+            <h3 class="keep">24시간 한국 연구원 동행</h3>
+            <p class="keep">출발, 이동, 활동, 귀국까지 FOX 연구원이 함께하며 안전과 생활을 관리합니다.</p>
+          </article>
+          <article class="care-card">
+            <iconify-icon icon="solar:chat-round-line-bold" width="30" aria-hidden="true"></iconify-icon>
+            <h3 class="keep">English Only Policy</h3>
+            <p class="keep">정규 활동 시간에는 영어 표현을 생활 장면에서 사용하도록 운영합니다.</p>
+          </article>
+          <article class="care-card">
+            <iconify-icon icon="solar:shield-check-bold" width="30" aria-hidden="true"></iconify-icon>
+            <h3 class="keep">학생 안전 관리</h3>
+            <p class="keep">일일 인원 점검, 이동 동선 공유, 비상 연락망을 운영합니다.</p>
+          </article>
+          <article class="care-card">
+            <iconify-icon icon="solar:notebook-bold" width="30" aria-hidden="true"></iconify-icon>
+            <h3 class="keep">성장 포트폴리오</h3>
+            <p class="keep">질문, 표현 장면, 협업 장면, 연구원 관찰 내용을 정리합니다.</p>
           </article>
         </div>
       </div>
@@ -1350,8 +1386,8 @@
     <section id="plan" class="section">
       <div class="wrap">
         <div class="section-head">
-          <span class="section-kicker"><iconify-icon icon="solar:calendar-bold" width="18" aria-hidden="true"></iconify-icon> 캠프 일정</span>
-          <h2 class="keep">18박 20일 일정으로 진행합니다.</h2>
+          <span class="section-kicker"><iconify-icon icon="solar:calendar-bold" width="18" aria-hidden="true"></iconify-icon> 상세 일정</span>
+          <h2 class="keep">상세일정 추가중</h2>
           <p class="section-lead keep">
             세부 방문 순서와 날짜별 일정은 항공, 대학, 기관 예약 일정에 맞춰 안내합니다.
           </p>
@@ -1359,7 +1395,7 @@
         <div class="schedule-card">
           <div class="schedule-term keep">18박 20일</div>
           <div>
-            <h3 class="keep">상세일정 추가중</h3>
+            <h3 class="keep">보스턴·뉴욕 중심 진행</h3>
             <p class="keep">보스턴·뉴욕을 중심으로 대학 탐방, 진로 Q&A, 필드트립, 도시 문화 탐방, 코리아타운 UCC 미션을 진행합니다.</p>
           </div>
         </div>

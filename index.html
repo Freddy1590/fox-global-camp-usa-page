@@ -414,11 +414,22 @@
     }
 
     .reason-card {
-      padding: 24px;
+      overflow: hidden;
       border: 1px solid var(--line);
       border-radius: var(--radius);
       background: var(--white);
       box-shadow: var(--soft);
+    }
+
+    .reason-photo {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      background: #dfe7ef;
+    }
+
+    .reason-body {
+      padding: 20px 24px 24px;
     }
 
     .reason-no {
@@ -1146,34 +1157,52 @@
         </div>
         <div class="reason-grid">
           <article class="reason-card">
-            <span class="reason-no">01</span>
-            <h3 class="keep">생활 영어 미션</h3>
-            <p class="keep">인사, 주문, 길 묻기, 자기소개, 인터뷰 질문, 리포팅 장면에서 영어를 써봅니다.</p>
+            <img class="reason-photo" src="assets/photos/intro-life-english-mission.jpg" alt="생활 영어 미션" />
+            <div class="reason-body">
+              <span class="reason-no">01</span>
+              <h3 class="keep">생활 영어 미션</h3>
+              <p class="keep">인사, 주문, 길 묻기, 자기소개, 인터뷰 질문, 리포팅 장면에서 영어를 써봅니다.</p>
+            </div>
           </article>
           <article class="reason-card">
-            <span class="reason-no">02</span>
-            <h3 class="keep">대학과 진로 탐색</h3>
-            <p class="keep">Harvard, MIT, Columbia 등 대학 탐방과 대학생 멘토 만남을 연결합니다.</p>
+            <img class="reason-photo" src="assets/photos/intro-university-career.jpg" alt="대학과 진로 탐색" />
+            <div class="reason-body">
+              <span class="reason-no">02</span>
+              <h3 class="keep">대학과 진로 탐색</h3>
+              <p class="keep">Harvard, MIT, Columbia 등 대학 탐방과 대학생 멘토 만남을 연결합니다.</p>
+            </div>
           </article>
           <article class="reason-card">
-            <span class="reason-no">03</span>
-            <h3 class="keep">MIT Museum·과학관 필드트립</h3>
-            <p class="keep">MIT Museum, 과학관, 항공우주 관련 박물관처럼 학생 그룹 방문이 가능한 곳을 확인해 일정에 반영합니다.</p>
+            <img class="reason-photo" src="assets/photos/intro-mit-museum-fieldtrip.jpg" alt="MIT Museum과 과학관 필드트립" />
+            <div class="reason-body">
+              <span class="reason-no">03</span>
+              <h3 class="keep">MIT Museum·과학관 필드트립</h3>
+              <p class="keep">MIT Museum, 과학관, 항공우주 관련 박물관처럼 학생 그룹 방문이 가능한 곳을 확인해 일정에 반영합니다.</p>
+            </div>
           </article>
           <article class="reason-card">
-            <span class="reason-no">04</span>
-            <h3 class="keep">미국 문화 경험</h3>
-            <p class="keep">도시, 음식, 교통, 박물관, 공공장소를 방문하며 미국 생활문화를 살펴봅니다.</p>
+            <img class="reason-photo" src="assets/photos/intro-us-culture.jpg" alt="미국 문화 경험" />
+            <div class="reason-body">
+              <span class="reason-no">04</span>
+              <h3 class="keep">미국 문화 경험</h3>
+              <p class="keep">도시, 음식, 교통, 박물관, 공공장소를 방문하며 미국 생활문화를 살펴봅니다.</p>
+            </div>
           </article>
           <article class="reason-card">
-            <span class="reason-no">05</span>
-            <h3 class="keep">K(Korea)를 찾아라</h3>
-            <p class="keep">미국 속 한국의 사람, 음식, 문화, 학교, 일을 찾아 질문하고 기록합니다.</p>
+            <img class="reason-photo" src="assets/photos/intro-k-mission.jpg" alt="K를 찾아라 미션" />
+            <div class="reason-body">
+              <span class="reason-no">05</span>
+              <h3 class="keep">K(Korea)를 찾아라</h3>
+              <p class="keep">미국 속 한국의 사람, 음식, 문화, 학교, 일을 찾아 질문하고 기록합니다.</p>
+            </div>
           </article>
           <article class="reason-card">
-            <span class="reason-no">06</span>
-            <h3 class="keep">성장 리포트</h3>
-            <p class="keep">아이의 역할, 질문, 표현 장면, 협업 장면을 연구원이 정리해 공유합니다.</p>
+            <img class="reason-photo" src="assets/photos/intro-growth-report.jpg" alt="성장 리포트" />
+            <div class="reason-body">
+              <span class="reason-no">06</span>
+              <h3 class="keep">성장 리포트</h3>
+              <p class="keep">아이의 역할, 질문, 표현 장면, 협업 장면을 연구원이 정리해 공유합니다.</p>
+            </div>
           </article>
         </div>
       </div>

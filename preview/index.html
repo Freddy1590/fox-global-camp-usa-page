@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>FOX 글로벌캠프 | 폭스러닝센터</title>
+<meta name="description" content="한국과 미국에서 함께 배우는 FOX 글로벌캠프. 학생 교류·문화 활동·대학 탐방·의학체험과 지난 활동을 소개합니다." />
+<meta property="og:title" content="FOX 글로벌캠프" />
+<meta property="og:description" content="한국과 미국에서 함께 배우는 FOX 글로벌캠프. 학생 교류·문화 활동·대학 탐방·의학체험과 지난 활동을 소개합니다." />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&display=swap" rel="stylesheet" />
+<script src="https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Pretendard', 'system-ui', '-apple-system', 'sans-serif'],
+        },
+        colors: {
+          brand: {
+            ink: '#0a1f3d',
+            navy: '#0e2a52',
+            sky: '#1f6fb8',
+            sky2: '#2b8ad6',
+            sun: '#fbcc3e',
+            sun2: '#fde082',
+            cream: '#fff8e6',
+          },
+        },
+        boxShadow: {
+          soft: '0 10px 30px -12px rgba(14, 42, 82, 0.18)',
+          card: '0 18px 40px -20px rgba(14, 42, 82, 0.28)',
+        },
+      },
+    },
+  };
+</script>
+<style>
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+  body {
+    font-family: 'Pretendard', 'system-ui', '-apple-system', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  .keep-all { word-break: keep-all; overflow-wrap: anywhere; }
+
+  .grad-sky {
+    background:
+      radial-gradient(1200px 600px at 90% -10%, rgba(251, 204, 62, 0.20), transparent 60%),
+      radial-gradient(900px 500px at 0% 10%, rgba(43, 138, 214, 0.18), transparent 60%),
+      linear-gradient(180deg, #f4f9ff 0%, #ffffff 100%);
+  }
+  .underline-sun {
+    background-image: linear-gradient(transparent 60%, rgba(251, 204, 62, 0.9) 60%, rgba(251, 204, 62, 0.9) 92%, transparent 92%);
+    padding: 0 0.18em;
+  }
+  .hand {
+    font-family: 'Caveat', 'Pretendard', cursive;
+    letter-spacing: 0.01em;
+  }
+
+  @keyframes floaty {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  .floaty { animation: floaty 6s ease-in-out infinite; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .reveal { opacity: 0; }
+  .reveal.in { animation: fadeUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+
+  .chip {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    padding: 0.4rem 0.85rem; border-radius: 999px;
+    background: rgba(31, 111, 184, 0.10); color: #0e2a52; font-weight: 700; font-size: 0.78rem;
+    border: 1px solid rgba(31, 111, 184, 0.20);
+  }
+
+  a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid #1f6fb8; outline-offset: 5px; }
+  summary { list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .floaty { animation: none; }
+    .reveal { opacity: 1; }
+    .reveal.in { animation: none; }
+  }
+</style>
+</head>
+<body class="text-slate-900 bg-white">
+
+<!-- Existing header styling, fewer destinations, direct contact -->
+<header class="sticky top-0 z-40 backdrop-blur-md bg-white/80 border-b border-slate-200/70">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
+    <a href="#top" aria-label="FOX 글로벌캠프 처음으로" class="flex items-center shrink-0"><img src="logos/logo_1.png" alt="FOX LC" class="h-8 sm:h-10 w-auto object-contain" /></a>
+    <nav aria-label="주요 메뉴" class="hidden lg:flex items-center gap-6 text-sm font-bold text-slate-700">
+      <a href="#why" class="hover:text-brand-sky transition">교육 방향</a>
+      <a href="#gallery" class="hover:text-brand-sky transition">한국·미국 교류</a>
+      <a href="#archive" class="hover:text-brand-sky transition">캠프 기록</a>
+    </nav>
+    <div class="flex items-center gap-3 shrink-0">
+      <a href="#archive" class="lg:hidden text-xs font-extrabold text-brand-sky">활동 기록</a>
+      <a href="tel:14332700" aria-label="폭스러닝센터 1433-2700으로 전화 문의" class="inline-flex items-center gap-1.5 px-3 sm:px-4 py-2.5 rounded-full bg-brand-navy text-white font-bold text-sm hover:scale-[1.02] active:scale-[0.98] transition">문의하기 <iconify-icon icon="solar:phone-bold" width="16"></iconify-icon></a>
+    </div>
+  </div>
+</header>
+<main>
+<section id="top" class="relative grad-sky overflow-hidden">
+  <div class="absolute left-0 top-0 -translate-x-6 -translate-y-6 text-emerald-700/35 floaty pointer-events-none">
+    <iconify-icon icon="solar:leaf-bold" width="150"></iconify-icon>
+  </div>
+  <div class="absolute right-0 top-10 translate-x-2 text-emerald-700/30 floaty pointer-events-none" style="animation-delay: 1.4s;">
+    <iconify-icon icon="solar:leaf-bold" width="130"></iconify-icon>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-12 lg:pt-14 lg:pb-16 grid lg:grid-cols-12 gap-8 lg:gap-10 items-center relative">
+    <div class="lg:col-span-7 reveal">
+      <div class="flex flex-wrap items-center gap-2 mb-5">
+        <span class="chip"><iconify-icon icon="solar:sun-bold" width="14"></iconify-icon> FOX 글로벌캠프</span>
+        <span class="chip"><iconify-icon icon="solar:globus-bold" width="14"></iconify-icon> 한국과 미국에서 이어지는 만남</span>
+      </div>
+
+      <p class="hand text-4xl md:text-5xl text-brand-sun mb-4 leading-none">"Share Our Worlds"</p>
+
+      <h1 class="font-black tracking-tight leading-[1.1] text-brand-ink keep-all mb-5">
+        <span class="block text-4xl md:text-6xl leading-[1.15]">FOX</span>
+        <span class="block text-4xl md:text-6xl leading-[1.15] mt-1"><span class="underline-sun">글로벌캠프</span></span>
+      </h1>
+
+      <p class="text-xl md:text-2xl font-extrabold text-brand-navy keep-all leading-snug mb-5">
+        한국과 미국에서 만나<br />
+        영어로 소통하고 함께 배웁니다.
+      </p>
+      <p class="text-base text-slate-600 keep-all leading-relaxed mb-5 max-w-2xl">
+        한국과 미국의 학생들이 영어로 소통하고, 함께 활동하며 서로의 문화와 생각을 나누는 캠프입니다.
+      </p>
+<div class="flex flex-col sm:flex-row gap-3">
+        <a href="#why" class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full bg-brand-sun text-brand-ink font-bold text-base hover:scale-[1.02] active:scale-[0.98] transition shadow-card">
+          <iconify-icon icon="solar:clipboard-check-bold" width="20"></iconify-icon>
+          캠프 살펴보기
+        </a>
+        <a href="tel:14332700" class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-white border border-slate-200 text-brand-navy font-bold hover:border-brand-sky transition"><iconify-icon icon="solar:phone-bold" width="18"></iconify-icon>캠프 문의</a>
+      </div>
+
+    </div>
+
+    <div class="lg:col-span-5 reveal" style="animation-delay: 200ms;">
+      <div class="relative">
+        <img src="assets/hero.webp" alt="함께 활동하는 캠프 참가자들" class="w-full aspect-[4/3] lg:aspect-[4/5] object-cover rounded-[28px] shadow-card" />
+
+        <div class="absolute -top-4 -right-4 md:-top-6 md:-right-6 floaty">
+          <div class="w-24 h-24 md:w-28 md:h-28 rounded-full bg-brand-sun flex flex-col items-center justify-center text-brand-ink shadow-card border-4 border-white -rotate-[10deg]">
+            <span class="text-[10px] font-extrabold tracking-widest">FOX</span>
+            <span class="text-2xl md:text-3xl font-black leading-none mt-1">Global</span>
+            <span class="text-[10px] font-extrabold tracking-widest mt-1">Camp</span>
+          </div>
+        </div>
+        <div class="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 bg-white rounded-2xl shadow-card px-4 py-3 border border-slate-200 floaty" style="animation-delay: 0.8s;">
+          <div class="flex items-center gap-3">
+            <iconify-icon icon="solar:globus-bold" width="36" class="text-brand-sky"></iconify-icon>
+            <div>
+              <p class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">서로의 일상을 나누는 만남</p>
+              <p class="text-sm font-extrabold text-brand-ink leading-tight">FOX 글로벌캠프</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="why" class="py-12 lg:py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mb-6 lg:mb-8 reveal">
+      <span class="chip mb-4"><iconify-icon icon="solar:star-bold" width="14"></iconify-icon> 캠프의 교육 방향</span>
+      <h2 class="text-[1.75rem] md:text-4xl lg:text-[2.75rem] font-black tracking-tight text-brand-ink keep-all leading-tight">영어로 소통하고,<br /><span class="underline-sun">함께 선택하고 표현합니다.</span></h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-5">
+      <article class="rounded-[28px] bg-gradient-to-br from-brand-navy to-brand-sky p-5 md:p-7 text-white shadow-card reveal">
+        <p class="text-[11px] font-extrabold tracking-widest text-white/85 mb-4">소통과 관계</p><h3 class="text-xl md:text-2xl font-black mb-3 keep-all">영어로 생각 나누기</h3><p class="text-white/85 keep-all leading-relaxed">자기 생각을 영어로 말하고, 친구의 이야기를 듣는 연습을 합니다.</p>
+      </article>
+      <article class="rounded-[28px] bg-brand-cream border border-amber-200/70 p-5 md:p-7 shadow-soft reveal">
+        <p class="text-[11px] font-extrabold tracking-widest text-amber-700 mb-4">선택과 협력</p><h3 class="text-xl md:text-2xl font-black text-brand-ink mb-3 keep-all">함께 정하고 역할 나누기</h3><p class="text-slate-700 keep-all leading-relaxed">활동을 정하고 역할을 나누며 협력하는 연습을 합니다.</p>
+      </article>
+      <article class="rounded-[28px] bg-white border border-slate-200 p-5 md:p-7 shadow-soft reveal">
+        <p class="text-[11px] font-extrabold tracking-widest text-brand-sky mb-4">정리와 표현</p><h3 class="text-xl md:text-2xl font-black text-brand-ink mb-3 keep-all">내 생각을 표현하기</h3><p class="text-slate-600 keep-all leading-relaxed">경험을 글과 그림으로 정리하고 발표하는 연습을 합니다.</p>
+      </article>
+    </div>
+    <aside class="rounded-[28px] bg-slate-50 border border-slate-200 mt-6 p-5 md:p-7 reveal">
+      <div class="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-8">
+        <div class="flex-1"><p class="text-[11px] font-extrabold tracking-widest text-brand-sky mb-3">배움의 사례 · 2025 미국</p><h3 class="text-xl font-black text-brand-ink keep-all mb-3">스스로 정하고, 경험을 기록했습니다.</h3><p class="text-slate-600 keep-all leading-relaxed">어바인에서 팀별로 활동 장소를 고르고 역할을 나눠 일정을 진행했습니다. 경험은 글과 그림으로 포트폴리오에 정리하고, 팀 프로젝트와 이후의 실천 계획을 발표했습니다.</p></div>
+        <a href="#portfolio-2025" class="shrink-0 self-start lg:self-center text-sm font-bold text-brand-sky underline underline-offset-4">학생 기록 보기 <span aria-hidden="true">→</span></a>
+      </div>
+    </aside>
+  </div>
+</section>
+<section id="gallery" class="py-12 lg:py-16 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mb-6 lg:mb-8 reveal"><span class="chip mb-4"><iconify-icon icon="solar:globus-bold" width="14"></iconify-icon> 한국과 미국에서의 교류</span><h2 class="text-[1.75rem] md:text-4xl lg:text-[2.75rem] font-black tracking-tight text-brand-ink keep-all leading-tight">한국과 미국에서<br /><span class="underline-sun">함께 배우는 만남</span></h2></div>
+    <div class="grid md:grid-cols-2 gap-5 lg:gap-6">
+      <article class="rounded-[28px] bg-brand-cream border border-amber-200/70 p-5 md:p-8 shadow-soft reveal">
+        <p class="text-xs font-extrabold tracking-widest text-amber-700 mb-4">한국에서의 교류</p><h3 class="text-2xl md:text-3xl font-black text-brand-ink keep-all leading-tight mb-4">영어로 소통하고<br />서로의 문화를 나눕니다.</h3><p class="text-slate-700 keep-all leading-relaxed">한국 학생과 미국 학생이 영어·사회정서학습(SEL) 활동을 함께합니다. 감정과 생각을 표현하고, 서로의 문화와 일상을 나누는 교류입니다.</p>
+      </article>
+      <article class="rounded-[28px] bg-white border border-slate-200 p-5 md:p-8 shadow-soft reveal">
+        <p class="text-xs font-extrabold tracking-widest text-brand-sky mb-4">미국에서의 교류</p><h3 class="text-2xl md:text-3xl font-black text-brand-ink keep-all leading-tight mb-4">학생들과 만나고<br />대학에서 배움을 넓힙니다.</h3><p class="text-slate-600 keep-all leading-relaxed">미국 학생들과 교류하고 학교·대학을 탐방합니다. 영어를 사용하며 사람을 만나고, 다양한 분야를 체험합니다.</p>
+      </article>
+    </div>
+    <p class="mt-5 reveal"><a href="#archive" class="inline-block py-2 text-sm font-bold text-brand-sky underline underline-offset-4">사진과 영상으로 보기 <span aria-hidden="true">→</span></a></p>
+  </div>
+</section>
+<section id="archive" class="py-12 lg:py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mb-8 lg:mb-10 reveal"><span class="chip mb-4"><iconify-icon icon="solar:videocamera-record-bold" width="14"></iconify-icon> 캠프 기록</span><h2 class="text-[1.75rem] md:text-4xl lg:text-[2.75rem] font-black tracking-tight text-brand-ink keep-all leading-tight">사진과 영상으로 보는<br /><span class="underline-sun">FOX 글로벌캠프</span></h2></div>
+    <div class="space-y-10 lg:space-y-14">
+      <article id="record-2026" class="reveal">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-4"><h3 class="text-3xl font-black text-brand-ink">2026</h3><div class="flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-600"><p><strong class="text-brand-ink">한국</strong> · 6월 16일~20일</p><p><strong class="text-brand-ink">미국</strong> · 7월 23일~8월 12일</p></div></div>
+        <p class="max-w-4xl text-slate-600 keep-all leading-relaxed mb-5">한국에서는 영어·SEL 활동과 부여·전주 탐방에 참여했습니다. 미국에서는 학생들과 식사하며 이야기를 나누고, 대학·기업·자연·문화 공간을 둘러봤습니다.</p>
+        <a href="https://youtu.be/-ORCwwRKMp4" target="_blank" rel="noopener" class="block rounded-[28px] overflow-hidden shadow-card group relative aspect-video bg-brand-ink" aria-label="2026 미국 활동 영상 — YouTube에서 새 창으로 보기">
+      <img src="https://img.youtube.com/vi/-ORCwwRKMp4/maxresdefault.jpg" alt="2026 미국 활동 영상" width="1280" height="720" loading="lazy" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/-ORCwwRKMp4/hqdefault.jpg';" />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-black/30"></div>
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-white px-4 text-center"><div class="w-14 h-14 md:w-20 md:h-20 rounded-full bg-red-600 flex items-center justify-center shadow-2xl group-hover:scale-110 transition mb-4"><iconify-icon icon="solar:play-bold" width="30" class="text-white ml-1"></iconify-icon></div><p class="text-sm md:text-base font-extrabold drop-shadow-lg keep-all">2026 미국 활동 영상 보기</p></div>
+    </a>
+        <div class="grid sm:grid-cols-2 gap-5 lg:gap-6 mt-6"><figure>
+      <a href="photos/project-2026-seaworld.jpg" class="lightbox-trigger block rounded-2xl overflow-hidden group" data-caption="2026년 7월 · 샌디에이고 씨월드 · 미국 학생들과 함께한 시간" aria-label="씨월드에서 함께 기념사진을 찍는 아이들과 인솔자 — 사진 크게 보기"><img src="photos/project-2026-seaworld.jpg" alt="씨월드에서 함께 기념사진을 찍는 아이들과 인솔자" loading="lazy" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500" style="object-position:50% 50%" /></a>
+      <figcaption class="mt-3 text-xs sm:text-sm text-slate-500 keep-all leading-relaxed">2026년 7월 · 샌디에이고 씨월드 · 미국 학생들과 함께한 시간</figcaption>
+    </figure><figure>
+      <a href="photos/project-2026-muir.jpg" class="lightbox-trigger block rounded-2xl overflow-hidden group" data-caption="2026 · 뮤어우즈 레드우드 숲 탐방" aria-label="뮤어우즈의 레드우드 숲길에 있는 참가자들 — 사진 크게 보기"><img src="photos/project-2026-muir.jpg" alt="뮤어우즈의 레드우드 숲길에 있는 참가자들" loading="lazy" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500" style="object-position:50% 78%" /></a>
+      <figcaption class="mt-3 text-xs sm:text-sm text-slate-500 keep-all leading-relaxed">2026 · 뮤어우즈 레드우드 숲 탐방</figcaption>
+    </figure></div>
+        <div id="vcom-learning" class="mt-6 rounded-2xl bg-brand-cream border border-amber-200/70 p-5 md:p-6">
+          <h4 class="text-lg font-extrabold text-brand-ink keep-all mb-2">VCOM 의과대학 투어와 의학체험</h4><p class="text-slate-700 keep-all leading-relaxed">대학을 둘러보고 심장과 폐의 작용, 혈액순환과 심장·호흡 소리를 배우는 의학체험에 참여했습니다.</p>
+          <details class="group mt-3"><summary class="flex items-center justify-between gap-4 py-2 cursor-pointer text-sm font-bold text-brand-sky"><span>VCOM 강의자료와 방문 사진</span><iconify-icon icon="solar:add-circle-linear" width="22" class="shrink-0 transition-transform group-open:rotate-45"></iconify-icon></summary>
+            <div class="grid sm:grid-cols-2 gap-5 mt-3">
+              <figure><a href="assets/vcom-circulation.png" class="lightbox-trigger block rounded-2xl overflow-hidden bg-white" data-caption="2026 VCOM 의학체험 · 혈액순환 도해 · Amoeba Sisters" aria-label="혈액순환 도해 — 크게 보기"><img src="assets/vcom-circulation.png" alt="심장을 거쳐 폐와 몸으로 이동하는 혈액의 경로를 설명한 도해" width="1762" height="1188" loading="lazy" class="w-full aspect-[4/3] object-contain" /></a><figcaption class="mt-3 text-xs sm:text-sm text-slate-500 keep-all">혈액순환 도해 · 출처: Amoeba Sisters</figcaption></figure>
+              <figure>
+      <a href="photos/project-2026-vcom.jpg" class="lightbox-trigger block rounded-2xl overflow-hidden group" data-caption="2026년 8월 · 어번 VCOM 방문" aria-label="VCOM에서 뼈 모형을 손에 든 참가자 — 사진 크게 보기"><img src="photos/project-2026-vcom.jpg" alt="VCOM에서 뼈 모형을 손에 든 참가자" loading="lazy" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500" style="object-position:50% 30%" /></a>
+      <figcaption class="mt-3 text-xs sm:text-sm text-slate-500 keep-all leading-relaxed">2026년 8월 · 어번 VCOM 방문</figcaption>
+    </figure>
+            </div>
+          </details>
+        </div>
+        <details class="group mt-5 border-y border-slate-200"><summary class="flex items-center justify-between gap-4 py-4 cursor-pointer text-sm font-bold text-brand-sky"><span>2026 사진 더 보기</span><iconify-icon icon="solar:add-circle-linear" width="22" class="shrink-0 transition-transform group-open:rotate-45"></iconify-icon></summary><div class="max-w-xl pb-5"><figure>
+      <a href="photos/project-2026-meta.jpg" class="lightbox-trigger block rounded-2xl overflow-hidden group" data-caption="2026년 8월 · 메타 스토어 · 스마트 안경 체험" aria-label="메타 스토어 전시대 앞에서 스마트 안경을 착용한 아이들 — 사진 크게 보기"><img src="photos/project-2026-meta.jpg" alt="메타 스토어 전시대 앞에서 스마트 안경을 착용한 아이들" loading="lazy" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500" style="object-position:50% 50%" /></a>
+      <figcaption class="mt-3 text-xs sm:text-sm text-slate-500 keep-all leading-relaxed">2026년 8월 · 메타 스토어 · 스마트 안경 체험</figcaption>
+    </figure></div></details>
+      </article>
+      <article id="record-2025" class="border-t border-slate-200 pt-8 lg:pt-10 reveal">
+        <h3 class="text-3xl font-black text-brand-ink mb-5">2025</h3>
+        <a href="https://youtu.be/Kek5253Ld0k" target="_blank" rel="noopener" class="block rounded-[28px] overflow-hidden shadow-card group relative aspect-video bg-brand-ink" aria-label="2025 미국 활동 영상 — YouTube에서 새 창으로 보기">
+      <img src="https://img.youtube.com/vi/Kek5253Ld0k/maxresdefault.jpg" alt="2025 미국 활동 영상" width="1280" height="720" loading="lazy" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/Kek5253Ld0k/hqdefault.jpg';" />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-black/30"></div>
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-white px-4 text-center"><div class="w-14 h-14 md:w-20 md:h-20 rounded-full bg-red-600 flex items-center justify-center shadow-2xl group-hover:scale-110 transition mb-4"><iconify-icon icon="solar:play-bold" width="30" class="text-white ml-1"></iconify-icon></div><p class="text-sm md:text-base font-extrabold drop-shadow-lg keep-all">2025 미국 활동 영상 보기</p></div>
+    </a>
+        <div class="grid sm:grid-cols-2 gap-5 lg:gap-6 mt-6"><figure>
+      <a href="photos/day3.jpg" class="lightbox-trigger block rounded-2xl overflow-hidden group" data-caption="2025년 6월 · 감정클레이" aria-label="감정클레이 작품을 함께 든 아이들 — 사진 크게 보기"><img src="assets/day3.webp" alt="감정클레이 작품을 함께 든 아이들" loading="lazy" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500" style="object-position:50% 70%" /></a>
+      <figcaption class="mt-3 text-xs sm:text-sm text-slate-500 keep-all leading-relaxed">2025년 6월 · 감정클레이</figcaption>
+    </figure><figure id="portfolio-2025">
+      <a href="photos/project-2025-portfolio.jpg" class="lightbox-trigger block rounded-2xl overflow-hidden group" data-caption="2025년 8월 · 미국 어바인 · 포트폴리오 작성" aria-label="2025년 미국 활동에서 워크북에 기록하는 학생들 — 사진 크게 보기"><img src="photos/project-2025-portfolio.jpg" alt="2025년 미국 활동에서 워크북에 기록하는 학생들" loading="lazy" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500" style="object-position:50% 50%" /></a>
+      <figcaption class="mt-3 text-xs sm:text-sm text-slate-500 keep-all leading-relaxed">2025년 8월 · 미국 어바인 · 포트폴리오 작성</figcaption>
+    </figure></div>
+      </article>
+      <article id="korea-2024" class="border-t border-slate-200 pt-8 lg:pt-10 reveal">
+        <h3 class="text-3xl font-black text-brand-ink mb-5">2024</h3>
+        <div class="grid sm:grid-cols-2 gap-5 lg:gap-8 items-center"><figure>
+      <a href="photos/gallery-9.jpg" class="lightbox-trigger block rounded-2xl overflow-hidden group" data-caption="2024년 6월 29일 · 한국 · 폭스러닝센터" aria-label="2024년 폭스러닝센터에서 함께 앉아 활동하는 아이들 — 사진 크게 보기"><img src="assets/gallery-9.webp" alt="2024년 폭스러닝센터에서 함께 앉아 활동하는 아이들" loading="lazy" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500" style="object-position:50% 75%" /></a>
+      <figcaption class="mt-3 text-xs sm:text-sm text-slate-500 keep-all leading-relaxed">2024년 6월 29일 · 한국 · 폭스러닝센터</figcaption>
+    </figure><p class="text-slate-600 keep-all leading-relaxed">한국 학생과 스톤랜치 학생이 부채를 만들고 태권도를 체험하며 한국과 미국의 놀이를 나눴습니다.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+<section id="school" class="py-12 lg:py-16 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mb-6 lg:mb-8 reveal"><span class="chip mb-4"><iconify-icon icon="solar:diploma-bold" width="14"></iconify-icon> 글로벌 교류</span><h2 class="text-[1.75rem] md:text-4xl lg:text-[2.75rem] font-black tracking-tight text-brand-ink keep-all leading-tight">캠프를<br /><span class="underline-sun">함께하는 기관</span></h2></div>
+    <div class="grid md:grid-cols-3 gap-5">
+      <article class="rounded-[28px] bg-white border border-slate-200 p-5 md:p-7 shadow-soft reveal"><img src="logos/fox-lc.png" alt="FOX LC" class="h-11 w-auto object-contain mb-5" /><h3 class="text-xl font-black text-brand-ink mb-3">폭스러닝센터</h3><p class="text-slate-600 keep-all leading-relaxed">캠프를 기획·운영합니다.</p></article>
+      <article class="rounded-[28px] bg-white border border-slate-200 p-5 md:p-7 shadow-soft reveal"><img src="logos/stone-ranch.png" alt="Stone Ranch Elementary School" class="h-11 w-auto object-contain mb-5" /><h3 class="text-xl font-black text-brand-ink mb-3 keep-all">스톤랜치 초등학교</h3><p class="text-slate-600 keep-all leading-relaxed">한국·미국 학생 교류를 함께한 학교입니다.</p></article>
+      <article class="rounded-[28px] bg-brand-cream border border-amber-200/70 p-5 md:p-7 shadow-soft reveal"><iconify-icon icon="solar:map-point-bold" width="36" class="text-amber-600 mb-5"></iconify-icon><h3 class="text-xl font-black text-brand-ink mb-3 keep-all">샌프란시스코 주립대학교(SFSU)</h3><p class="text-slate-700 keep-all leading-relaxed">공동 기획과 한국에서의 영어 활동에 참여했습니다.</p></article>
+    </div>
+  </div>
+</section>
+<section id="apply" class="py-12 lg:py-16 bg-brand-ink text-white relative overflow-hidden">
+  <div class="absolute -right-20 -top-20 opacity-10 pointer-events-none"><iconify-icon icon="solar:globus-bold" width="380"></iconify-icon></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative grid lg:grid-cols-12 gap-8 items-center">
+    <div class="lg:col-span-6 reveal"><span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-sun/15 text-brand-sun text-xs font-extrabold mb-5">캠프 문의</span><h2 class="text-[1.75rem] md:text-4xl lg:text-[2.75rem] font-black tracking-tight keep-all leading-tight mb-5">FOX 글로벌캠프<br /><span class="text-brand-sun">문의하기</span></h2><p class="text-white/75 keep-all leading-relaxed mb-6">자녀의 학년과 관심 있는 활동을 알려주세요.</p><a href="tel:14332700" class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full bg-brand-sun text-brand-ink font-extrabold hover:scale-[1.02] active:scale-[0.98] transition shadow-card"><iconify-icon icon="solar:phone-bold" width="20"></iconify-icon>전화 문의</a></div>
+    <div class="lg:col-span-6 rounded-[28px] bg-white/5 border border-white/10 p-5 md:p-8 backdrop-blur-sm reveal"><p class="text-xs font-extrabold tracking-widest text-brand-sun mb-3">폭스러닝센터</p><a href="tel:14332700" class="inline-block text-3xl md:text-4xl font-black mb-5 hover:text-brand-sun transition">1433-2700</a><div class="flex flex-wrap items-center gap-3 mb-3"><p class="text-sm text-white/80">카카오톡 ID <strong class="text-white">FOX_LC</strong></p><button type="button" id="copy-kakao-id" class="rounded-full border border-white/30 px-3 py-1.5 text-xs font-bold text-white hover:bg-white/10 transition">카카오톡 ID 복사</button></div><p id="copy-kakao-status" class="min-h-[1.25rem] text-xs text-brand-sun mb-3" role="status" aria-live="polite"></p><p class="text-sm text-white/60 keep-all">골프존 조이마루 2층, 폭스러닝센터</p><p class="text-xs text-white/60 keep-all leading-relaxed mt-5 pt-5 border-t border-white/10">카카오톡에서는 FOX_LC를 검색해 문의하실 수 있습니다.</p></div>
+  </div>
+</section>
+</main>
+<footer class="py-12 bg-slate-950 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-3 gap-8 mb-8">
+      <div>
+        <div class="inline-flex items-center gap-3 mb-4 bg-white px-4 py-3 rounded-2xl">
+          <img src="logos/fox-lc.png" alt="FOX LC" class="h-9 w-auto object-contain" />
+        </div>
+        <p class="text-sm text-slate-400 keep-all leading-relaxed">
+          한국과 미국에서 만나며<br />이어가는 FOX 글로벌캠프.
+        </p>
+      </div>
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-widest text-slate-500 mb-3">문의</p>
+        <ul class="space-y-2.5 text-sm">
+          <li class="flex items-center gap-2"><iconify-icon icon="solar:phone-bold" width="16" class="text-brand-sun"></iconify-icon> <a href="tel:14332700" class="hover:text-white">폭스러닝센터 <strong class="text-white">1433-2700</strong></a></li>
+          <li class="flex items-center gap-2"><iconify-icon icon="solar:chat-round-dots-bold" width="16" class="text-brand-sun"></iconify-icon> 카카오톡 <strong class="text-white">FOX_LC</strong></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-[11px] font-extrabold uppercase tracking-widest text-slate-500 mb-3">위치</p>
+        <p class="text-sm text-slate-300 keep-all leading-relaxed flex items-start gap-2">
+          <iconify-icon icon="solar:map-point-bold" width="16" class="text-brand-sun mt-1 shrink-0"></iconify-icon>
+          골프존 조이마루 2층,<br />폭스러닝센터
+        </p>
+      </div>
+    </div>
+    <div class="pt-6 border-t border-slate-800 text-xs text-slate-500 keep-all flex flex-col sm:flex-row gap-2 sm:items-center sm:justify-between">
+      <p>© 2026 (주)폭스커넥트 · Fox Learning Center. All rights reserved.</p>
+      <p>FOX Global Camp · Korea & USA</p>
+    </div>
+  </div>
+</footer>
+<div id="lightbox" class="fixed inset-0 z-50 hidden bg-black/95 items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="사진 크게 보기" aria-hidden="true">
+  <button type="button" id="lightbox-close" class="absolute top-4 right-4 z-10 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition" aria-label="닫기">
+    <iconify-icon icon="solar:close-circle-bold" width="32"></iconify-icon>
+  </button>
+  <button type="button" id="lightbox-prev" class="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition" aria-label="이전 사진">
+    <iconify-icon icon="solar:alt-arrow-left-bold" width="28"></iconify-icon>
+  </button>
+  <button type="button" id="lightbox-next" class="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 z-10 w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition" aria-label="다음 사진">
+    <iconify-icon icon="solar:alt-arrow-right-bold" width="28"></iconify-icon>
+  </button>
+  <p id="lightbox-counter" class="absolute bottom-5 left-1/2 -translate-x-1/2 z-10 w-[80%] text-center text-white/90 text-xs md:text-sm font-bold leading-relaxed"></p>
+  <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[82vh] object-contain rounded-xl" />
+</div>
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+  const copyKakaoButton = document.getElementById('copy-kakao-id');
+  const copyKakaoStatus = document.getElementById('copy-kakao-status');
+  copyKakaoButton.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText('FOX_LC');
+      copyKakaoStatus.textContent = '카카오톡 ID를 복사했습니다.';
+    } catch {
+      copyKakaoStatus.textContent = '카카오톡 ID는 FOX_LC입니다.';
+    }
+  });
+
+  // ============ Lightbox (gallery + 사진 전환) ============
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxClose = document.getElementById('lightbox-close');
+  const lightboxPrev = document.getElementById('lightbox-prev');
+  const lightboxNext = document.getElementById('lightbox-next');
+  const lightboxCounter = document.getElementById('lightbox-counter');
+  const lightboxTriggers = Array.from(document.querySelectorAll('.lightbox-trigger'));
+  let currentLightboxIndex = 0;
+  let lightboxReturnFocus = null;
+
+  function showLightboxAt(index) {
+    if (lightboxTriggers.length === 0) return;
+    currentLightboxIndex = (index + lightboxTriggers.length) % lightboxTriggers.length;
+    const trigger = lightboxTriggers[currentLightboxIndex];
+    const innerImg = trigger.querySelector('img');
+    lightboxImg.src = trigger.getAttribute('href');
+    lightboxImg.alt = innerImg ? innerImg.alt : '';
+    lightboxCounter.textContent = `${currentLightboxIndex + 1} / ${lightboxTriggers.length} · ${trigger.dataset.caption || lightboxImg.alt}`;
+  }
+
+  function openLightbox(index) {
+    lightboxReturnFocus = document.activeElement;
+    showLightboxAt(index);
+    lightbox.setAttribute('aria-hidden', 'false');
+    lightbox.classList.remove('hidden');
+    lightbox.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+    lightboxClose.focus();
+  }
+  function closeLightbox() {
+    lightbox.classList.add('hidden');
+    lightbox.classList.remove('flex');
+    lightboxImg.src = '';
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    lightboxReturnFocus?.focus();
+  }
+
+  lightboxTriggers.forEach((el, index) => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      openLightbox(index);
+    });
+  });
+
+  // 배경 또는 이미지 클릭 시 닫기 (버튼은 stopPropagation으로 보호)
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox || e.target === lightboxImg) closeLightbox();
+  });
+  lightboxClose.addEventListener('click', (e) => { e.stopPropagation(); closeLightbox(); });
+  lightboxPrev.addEventListener('click', (e) => { e.stopPropagation(); showLightboxAt(currentLightboxIndex - 1); });
+  lightboxNext.addEventListener('click', (e) => { e.stopPropagation(); showLightboxAt(currentLightboxIndex + 1); });
+
+  document.addEventListener('keydown', (e) => {
+    if (lightbox.classList.contains('hidden')) return;
+    if (e.key === 'Escape') closeLightbox();
+    else if (e.key === 'ArrowLeft') showLightboxAt(currentLightboxIndex - 1);
+    else if (e.key === 'ArrowRight') showLightboxAt(currentLightboxIndex + 1);
+  });
+
+
+  lightbox.addEventListener('keydown', (e) => {
+    if (e.key !== 'Tab') return;
+    const controls = [lightboxClose, lightboxPrev, lightboxNext];
+    const current = controls.indexOf(document.activeElement);
+    if (e.shiftKey && current <= 0) { e.preventDefault(); lightboxNext.focus(); }
+    else if (!e.shiftKey && (current < 0 || current === controls.length - 1)) { e.preventDefault(); lightboxClose.focus(); }
+  });
+</script>
+</body>
+</html>

@@ -42,7 +42,7 @@
   .chapter-text>.button,.chapter-text>.text-link{margin-top:22px}
   .chapter-text .scene-caption{font-size:12px;margin-top:22px}
   .film-chapter::before,.film-stage::after{background:linear-gradient(180deg,rgba(8,28,20,.12),rgba(8,28,20,.1) 28%,rgba(8,28,20,.78) 56%,rgba(8,28,20,.96))}
-  .film-ready .chapter-copy::before{content:'';position:absolute;inset:-32px calc((100vw - 100%)/-2);z-index:-1;pointer-events:none;background:linear-gradient(180deg,transparent,rgba(8,28,20,.76) 32px,rgba(8,28,20,.76) calc(100% - 32px),transparent)}
+  .film-ready .chapter-copy::before,.film-opening .chapter-copy::before{content:'';position:absolute;inset:-32px calc((100vw - 100%)/-2);z-index:-1;pointer-events:none;background:linear-gradient(180deg,transparent,rgba(8,28,20,.76) 32px,rgba(8,28,20,.76) calc(100% - 32px),transparent)}
   .film-years{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 24px;margin-top:24px}
   .film-years a{min-height:76px;padding-top:12px}
   .film-years strong{font-size:32px}
@@ -87,4 +87,15 @@
   .film-programs .text-link{font-size:14px}
   .film-contact{gap:12px 24px}.film-contact>span{flex-basis:100%;font-size:14px}
   .chapter-text .film-contact-intro{font-size:17px}
+}
+
+/* Keep the opening copy below the students' faces, including short mobile viewports. */
+@media(min-width:901px){
+  .film-opening{align-items:flex-end;padding-bottom:clamp(56px,7svh,96px)}
+  .film-opening .chapter-copy{width:88%;max-width:none}
+}
+@media(max-width:900px){
+  .film-opening{padding-top:max(300px,45svh)}
+  .film-opening .chapter-visual img,.film-opening::before{height:var(--scene-height)}
+  .film-opening::before,.film-stage:has(>img:first-child.is-active)::after{background:linear-gradient(180deg,rgba(8,28,20,.04),rgba(8,28,20,.08) 42%,rgba(8,28,20,.78) 66%,rgba(8,28,20,.96))}
 }

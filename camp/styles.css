@@ -109,3 +109,19 @@
 .record-story h4{font-size:21px;line-height:1.5;letter-spacing:-.025em;margin-bottom:14px}
 
 .photo-dialog img[src$="camp-program-2023.png"]{background:var(--white)}
+
+.camp-video{margin-top:24px;min-width:0}
+.camp-video .video-player{aspect-ratio:16/9;position:relative;background:var(--ink)}
+.camp-video .video-preview{position:relative;display:grid;place-items:center;width:100%;height:100%;color:var(--white)}
+.camp-video .video-preview[hidden]{display:none}
+.camp-video .video-preview img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.camp-video .video-preview::after{content:'';position:absolute;inset:50% 0 0;background:linear-gradient(transparent,rgba(8,28,20,.8))}
+.camp-video .video-play{z-index:1;display:grid;place-items:center;width:64px;height:64px;padding-left:4px;border-radius:50%;background:var(--accent);font-size:24px;box-shadow:0 2px 16px #0005}
+.camp-video .video-play-label{position:absolute;bottom:16px;z-index:1;font-size:14px;font-weight:700}
+.camp-video .video-preview:focus-visible{outline:3px solid var(--white);outline-offset:-5px}
+.camp-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.camp-video figcaption{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 20px}
+.camp-video figcaption>span{font-weight:700;color:var(--ink)}
+.camp-video figcaption>a{display:inline-flex;align-items:center;min-height:44px;text-decoration:underline}
+.additional-grid .camp-video{margin-top:0}
+.details>.history-photo+.additional-grid,.details>.camp-video+.additional-grid{margin-top:24px}

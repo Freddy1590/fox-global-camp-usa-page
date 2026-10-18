@@ -37,8 +37,7 @@ if (film) {
   function syncScene() {
     frame = null;
     if (wheelTarget !== null && Math.abs(window.scrollY - wheelTarget) < 2) {
-      wheelTarget = null;
-      if (!wheelTimer) cancelWheelSnap();
+      finishWheelSnap();
     }
     if (reducedMotion.matches) return;
     const header = document.querySelector('.site-header').offsetHeight;
@@ -62,6 +61,13 @@ if (film) {
     wheelDirection = 0;
     wheelDistance = 0;
     root.style.removeProperty('scroll-snap-type');
+  }
+  function finishWheelSnap() {
+    if (wheelTarget === null) return;
+    wheelTarget = null;
+    clearTimeout(wheelTimer);
+    // Pause at the stop without extending the pause on every wheel event.
+    wheelTimer = setTimeout(cancelWheelSnap, 280);
   }
   function readingStops() {
     const available = window.innerHeight - header.offsetHeight;
@@ -103,12 +109,8 @@ if (film) {
     if (chapter) activate(chapter);
   });
   window.addEventListener('scroll', queueScene, {passive:true});
-  window.addEventListener('scrollend', () => {
-    if (!wheelConsumed) return;
-    wheelTarget = null;
-    if (!wheelTimer) cancelWheelSnap();
-  });
-  // One wheel gesture reaches one reading position; its momentum cannot skip ahead.
+  window.addEventListener('scrollend', finishWheelSnap);
+  // Move one reading position at a time, with a brief pause before more input.
   window.addEventListener('wheel', event => {
     if (reducedMotion.matches || event.ctrlKey || event.metaKey || !event.deltaY || Math.abs(event.deltaX) > Math.abs(event.deltaY)) return;
     const direction = Math.sign(event.deltaY);
@@ -124,16 +126,16 @@ if (film) {
     }
     event.preventDefault();
     root.style.scrollSnapType = 'none';
-    clearTimeout(wheelTimer);
-    wheelTimer = setTimeout(() => {
-      wheelTimer = null;
-      if (wheelTarget === null) cancelWheelSnap();
-    }, 220);
     if (wheelConsumed) return;
+    clearTimeout(wheelTimer);
+    wheelTimer = setTimeout(cancelWheelSnap, 220);
     wheelDistance += Math.abs(event.deltaY) * (event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? window.innerHeight : 1);
     if (wheelDistance < 24) return;
     wheelConsumed = true;
     wheelTarget = target;
+    clearTimeout(wheelTimer);
+    // Release even if the browser interrupts motion without reporting its end.
+    wheelTimer = setTimeout(cancelWheelSnap, 1500);
     window.scrollTo({top:target, behavior:'smooth'});
   }, {passive:false});
   window.addEventListener('keydown', cancelWheelSnap);

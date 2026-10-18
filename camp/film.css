@@ -1,5 +1,4 @@
 html.camp-snap{scroll-snap-type:y proximity;scroll-padding-top:var(--film-scroll-offset)}
-html.camp-snap.camp-snap-fit{scroll-snap-type:y mandatory}
 html.camp-snap .film-chapter{scroll-snap-align:start;scroll-snap-stop:always;scroll-margin-top:0}
 html.camp-snap .footer{scroll-snap-align:end}
 .camp-film{position:relative;isolation:isolate;background:var(--ink);color:var(--paper);--scene-height:calc(100svh - var(--film-scroll-offset,var(--header-h)));--film-ease:cubic-bezier(.23,1,.32,1)}

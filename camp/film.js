@@ -20,9 +20,7 @@ if (film) {
   let frame;
   let wheelTimer;
   let wheelDirection = 0;
-  let wheelDistance = 0;
-  let wheelConsumed = false;
-  let wheelTarget = null;
+  let wheelPaused = false;
   function activate(chapter) {
     const index = chapters.indexOf(chapter);
     if (index < 0 || index === activeIndex) return;
@@ -36,9 +34,6 @@ if (film) {
   }
   function syncScene() {
     frame = null;
-    if (wheelTarget !== null && Math.abs(window.scrollY - wheelTarget) < 2) {
-      finishWheelSnap();
-    }
     if (reducedMotion.matches) return;
     const header = document.querySelector('.site-header').offsetHeight;
     const line = header + (window.innerHeight - header) * .72;
@@ -55,19 +50,9 @@ if (film) {
   function cancelWheelSnap() {
     clearTimeout(wheelTimer);
     wheelTimer = null;
-    if (wheelTarget !== null) window.scrollTo({top:window.scrollY, behavior:'instant'});
-    wheelTarget = null;
-    wheelConsumed = false;
+    wheelPaused = false;
     wheelDirection = 0;
-    wheelDistance = 0;
     root.style.removeProperty('scroll-snap-type');
-  }
-  function finishWheelSnap() {
-    if (wheelTarget === null) return;
-    wheelTarget = null;
-    clearTimeout(wheelTimer);
-    // Pause at the stop without extending the pause on every wheel event.
-    wheelTimer = setTimeout(cancelWheelSnap, 280);
   }
   function readingStops() {
     const available = window.innerHeight - header.offsetHeight;
@@ -86,13 +71,8 @@ if (film) {
     return stops;
   }
   function refreshSnap() {
-    const availableHeight = window.innerHeight - header.offsetHeight;
     root.style.setProperty('--film-scroll-offset', `${header.offsetHeight}px`);
     root.classList.toggle('camp-snap', !reducedMotion.matches);
-    // Long scenes must remain readable, including on short desktop screens.
-    root.classList.toggle('camp-snap-fit', !reducedMotion.matches && chapters.every(chapter =>
-      chapter.getBoundingClientRect().height <= availableHeight + .5
-    ));
   }
   function refresh() {
     cancelWheelSnap();
@@ -109,8 +89,7 @@ if (film) {
     if (chapter) activate(chapter);
   });
   window.addEventListener('scroll', queueScene, {passive:true});
-  window.addEventListener('scrollend', finishWheelSnap);
-  // Move one reading position at a time, with a brief pause before more input.
+  // Follow wheel distance, pausing only when a reading boundary is reached.
   window.addEventListener('wheel', event => {
     if (reducedMotion.matches || event.ctrlKey || event.metaKey || !event.deltaY || Math.abs(event.deltaX) > Math.abs(event.deltaY)) return;
     const direction = Math.sign(event.deltaY);
@@ -120,23 +99,18 @@ if (film) {
     const target = direction > 0
       ? stops.find(top => top > window.scrollY + 2)
       : stops.findLast(top => top < window.scrollY - 2);
-    if (!wheelConsumed && target === undefined) {
-      cancelWheelSnap();
-      return;
-    }
+    if (target === undefined) return;
     event.preventDefault();
+    // Keep native snapping off for wheel input so small moves stay small.
     root.style.scrollSnapType = 'none';
-    if (wheelConsumed) return;
-    clearTimeout(wheelTimer);
-    wheelTimer = setTimeout(cancelWheelSnap, 220);
-    wheelDistance += Math.abs(event.deltaY) * (event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? window.innerHeight : 1);
-    if (wheelDistance < 24) return;
-    wheelConsumed = true;
-    wheelTarget = target;
-    clearTimeout(wheelTimer);
-    // Release even if the browser interrupts motion without reporting its end.
-    wheelTimer = setTimeout(cancelWheelSnap, 1500);
-    window.scrollTo({top:target, behavior:'smooth'});
+    if (wheelPaused) return;
+    const delta = event.deltaY * (event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? window.innerHeight : 1);
+    const position = direction > 0 ? Math.min(window.scrollY + delta, target) : Math.max(window.scrollY + delta, target);
+    window.scrollTo({top:position, behavior:'instant'});
+    if (Math.abs(position - target) < 1) {
+      wheelPaused = true;
+      wheelTimer = setTimeout(() => { wheelPaused = false; wheelTimer = null; }, 200);
+    }
   }, {passive:false});
   window.addEventListener('keydown', cancelWheelSnap);
   window.addEventListener('pointerdown', cancelWheelSnap);

@@ -120,6 +120,6 @@ if (film) {
   reducedMotion.addEventListener('change', refresh);
   const sizeObserver = new ResizeObserver(refreshSnap);
   [header, ...chapters].forEach(element => sizeObserver.observe(element));
-  document.fonts.ready.then(refresh);
+  document.fonts.ready.then(() => { refreshSnap(); queueScene(); });
   refresh();
 }

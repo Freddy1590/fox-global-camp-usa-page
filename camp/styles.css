@@ -125,3 +125,9 @@
 .camp-video figcaption>a{display:inline-flex;align-items:center;min-height:44px;text-decoration:underline}
 .additional-grid .camp-video{margin-top:0}
 .details>.history-photo+.additional-grid,.details>.camp-video+.additional-grid{margin-top:24px}
+
+/* Keep the country and the original camp title distinct without adding another card. */
+.entry-country{font-size:14px;font-weight:750;color:var(--accent);margin-bottom:8px}
+.entry-country+.entry-heading{align-items:flex-start;flex-wrap:wrap;gap:8px 24px}
+.entry-country+.entry-heading h3{flex:1 1 420px}
+@media(max-width:1200px){.entry-country+.entry-heading h3{flex-basis:auto}}

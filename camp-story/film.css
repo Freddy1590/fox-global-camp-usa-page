@@ -94,8 +94,7 @@ html.camp-snap .footer{scroll-snap-align:end}
   .chapter-text .film-contact-intro{font-size:17px}
 }
 
-/* Keep the desktop opening composition unchanged. */
+/* Keep the opening low in the photo; share the header and body alignment. */
 @media(min-width:901px){
   .film-opening{align-items:flex-end;padding-bottom:clamp(56px,7svh,96px)}
-  .film-opening .chapter-copy{width:88%;max-width:none}
 }

@@ -22,6 +22,10 @@
   let request = 0;
   let timer;
   let animations = [];
+  let gesture = null;
+  let dragged = [];
+  let dragOffset = 0;
+  let suppressClickUntil = 0;
 
   const indexOf = index => (index + pictures.length) % pictures.length;
   const windowAt = index => [-2, -1, 0, 1, 2].map(offset => pictures[indexOf(index + offset)]);
@@ -32,8 +36,31 @@
     animations = [];
   }
 
+  function releasePointer() {
+    const pointer = gesture;
+    gesture = null;
+    if (pointer && gallery.hasPointerCapture(pointer.id)) gallery.releasePointerCapture(pointer.id);
+    gallery.classList.remove('is-dragging');
+  }
+
+  function resetDrag(snapBack = false) {
+    releasePointer();
+    const offset = dragOffset;
+    dragged.forEach(picture => {
+      picture.style.removeProperty('transform');
+      if (snapBack && offset && !reducedMotion.matches) {
+        animations.push(picture.animate([
+          { transform: `translateX(${offset}px)` }, { transform: 'none' }
+        ], { duration: 220, easing: 'cubic-bezier(.22,1,.36,1)' }));
+      }
+    });
+    dragged = [];
+    dragOffset = 0;
+  }
+
   function cancelPending() {
     request += 1;
+    if (busy && !gesture && dragged.length) resetDrag();
     busy = false;
     clearTimeout(timer);
   }
@@ -46,7 +73,7 @@
 
   function schedule() {
     clearTimeout(timer);
-    if (!busy && canPlay()) timer = setTimeout(() => advance(1, false, false), 7000);
+    if (!busy && !gesture && canPlay()) timer = setTimeout(() => advance(1, false, false), 5000);
   }
 
   function updateToggle() {
@@ -142,7 +169,7 @@
     }
   }
 
-  async function advance(direction, immediate, manual) {
+  async function advance(direction, immediate, manual, fromDrag = false) {
     const currentRequest = ++request;
     const target = indexOf(center + direction);
     const incoming = windowAt(target);
@@ -154,6 +181,7 @@
       if (pictures.some(picture => picture.contains(document.activeElement) && !incoming.includes(picture))) return;
       stopAnimations();
       const before = new Map(windowAt(center).map(picture => [picture, picture.getBoundingClientRect()]));
+      resetDrag();
       pictures.forEach(picture => {
         const slot = incoming.indexOf(picture);
         picture.hidden = slot < 0;
@@ -167,8 +195,8 @@
         incoming.forEach(picture => {
           const old = before.get(picture);
           const after = picture.getBoundingClientRect();
-          const duration = mobile.matches ? 240 : 650;
-          const frames = mobile.matches
+          const duration = fromDrag ? 420 : mobile.matches ? 240 : 650;
+          const frames = mobile.matches && !fromDrag
             ? [{ opacity: 0 }, { opacity: 1 }]
             : old
               ? [
@@ -195,6 +223,7 @@
       // A failed decode leaves every current photo and link in place.
     } finally {
       if (currentRequest === request) {
+        if (fromDrag && dragged.length) resetDrag(true);
         busy = false;
         schedule();
       }
@@ -203,11 +232,13 @@
 
   [[previous, -1], [next, 1]].forEach(([button, direction]) => {
     button.addEventListener('click', event => {
+      resetDrag();
       pause();
       advance(direction, event.detail === 0, true);
     });
   });
   toggle.addEventListener('click', () => {
+    resetDrag();
     cancelPending();
     userPaused = !userPaused;
     explicitResume = !userPaused;
@@ -234,23 +265,100 @@
   });
   gallery.addEventListener('pointerdown', event => {
     if (event.pointerType === 'touch' && !toggle.contains(event.target)) pause();
+    suppressClickUntil = 0;
+    if (event.button !== 0 || event.isPrimary === false || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    const picture = event.target.closest('.cover-picture');
+    if (!picture || picture.hidden || !gallery.classList.contains('is-carousel')) return;
+    cancelPending();
+    stopAnimations();
+    resetDrag();
+    gesture = { id: event.pointerId, x: event.clientX, y: event.clientY, horizontal: false };
   });
+  gallery.addEventListener('dragstart', event => {
+    if (event.target.closest('.cover-picture')) event.preventDefault();
+  });
+  gallery.addEventListener('click', event => {
+    if (event.detail && Date.now() < suppressClickUntil) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      suppressClickUntil = 0;
+    }
+  }, true);
+  window.addEventListener('pointermove', event => {
+    if (!gesture || gesture.id !== event.pointerId) return;
+    const dx = event.clientX - gesture.x;
+    const dy = event.clientY - gesture.y;
+    if (!gesture.horizontal) {
+      if (Math.max(Math.abs(dx), Math.abs(dy)) < 8) return;
+      if (Math.abs(dy) >= Math.abs(dx)) {
+        resetDrag();
+        schedule();
+        return;
+      }
+      gesture.horizontal = true;
+      pause();
+      gallery.setPointerCapture(gesture.id);
+      gallery.classList.add('is-dragging');
+      dragged = windowAt(center);
+    }
+    event.preventDefault();
+    const limit = Math.min(gallery.getBoundingClientRect().width * 0.2, 160);
+    dragOffset = Math.max(-limit, Math.min(limit, dx));
+    dragged.forEach(picture => { picture.style.transform = `translateX(${dragOffset}px)`; });
+  }, { passive: false });
+  window.addEventListener('pointerup', event => {
+    if (!gesture || gesture.id !== event.pointerId) return;
+    const horizontal = gesture.horizontal;
+    releasePointer();
+    if (horizontal) suppressClickUntil = Date.now() + 700;
+    const threshold = Math.max(24, Math.min(64, centerImage().getBoundingClientRect().width * 0.12));
+    if (horizontal && Math.abs(dragOffset) >= threshold) {
+      const direction = dragOffset < 0 ? 1 : -1;
+      const incoming = windowAt(indexOf(center + direction));
+      // A pointer drag can move its focused edge link out of the visible five.
+      if (pictures.some(picture => picture.contains(document.activeElement) && !incoming.includes(picture))) {
+        (direction > 0 ? next : previous).focus({ preventScroll: true });
+      }
+      advance(direction, false, true, true);
+    } else {
+      resetDrag(true);
+      schedule();
+    }
+  });
+  const cancelGesture = event => {
+    if (!gesture || gesture.id !== event.pointerId) return;
+    if (gesture.horizontal) suppressClickUntil = Date.now() + 700;
+    resetDrag(true);
+    schedule();
+  };
+  window.addEventListener('pointercancel', cancelGesture);
+  gallery.addEventListener('lostpointercapture', event => {
+    if (event.target === gallery) cancelGesture(event);
+  });
+  window.addEventListener('blur', () => {
+    cancelPending();
+    resetDrag();
+  });
+  window.addEventListener('focus', schedule);
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
       cancelPending();
       stopAnimations();
+      resetDrag();
     }
     schedule();
   });
   reducedMotion.addEventListener('change', () => {
     cancelPending();
     stopAnimations();
+    resetDrag();
     updateToggle();
     schedule();
   });
   window.addEventListener('resize', () => {
     cancelPending();
     stopAnimations();
+    resetDrag();
     observeCenter();
     schedule();
   });

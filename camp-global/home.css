@@ -1,6 +1,6 @@
 .home-page{min-height:100svh;display:flex;flex-direction:column}
 .cover-main{flex:1;display:flex;align-items:center;background:#fff}
-.cover{width:100%;padding-block:clamp(24px,4svh,44px) 18px}
+.cover{width:100%;padding-block:clamp(24px,4svh,44px) 18px;overflow-x:clip}
 .cover-title{text-align:center}
 .cover-title h1{font-family:Arial,Pretendard,sans-serif;font-size:clamp(54px,6.7vw,100px);letter-spacing:-.065em;line-height:1.06;font-weight:800}
 .cover-title h1 span{color:var(--blue)}
@@ -12,6 +12,10 @@
 .cover-picture{min-width:0;display:block;text-decoration:none;animation:cover-arrive 450ms var(--ease-out) both}
 .cover-picture[hidden]{display:none}
 .is-carousel .cover-picture{animation:none;transform-origin:top left}
+.is-carousel .cover-picture{touch-action:pan-y pinch-zoom;user-select:none;-webkit-user-select:none;cursor:grab}
+.is-carousel .cover-picture img{-webkit-user-drag:none}
+.is-dragging .cover-picture{cursor:grabbing}
+.is-dragging .cover-picture:hover img{transform:none;transition:none}
 .cover-picture figcaption strong{text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px;text-decoration-thickness:1px}
 .cover-picture img{width:100%;height:var(--photo-height);object-fit:cover;border-radius:14px;transition:transform 180ms var(--ease-out)}
 .cover-picture[data-slot="0"]{grid-area:far-left;margin-top:76px;animation-delay:80ms}

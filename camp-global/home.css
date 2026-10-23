@@ -32,6 +32,13 @@
 .home-footer a:first-of-type{margin-left:auto}
 @keyframes cover-arrive{from{opacity:.45;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 @media(hover:hover) and (pointer:fine){.cover-picture:hover img{transform:translateY(-4px)}.cover-picture:hover strong{color:var(--blue)}}
+@media(min-width:1800px) and (min-height:900px){
+ .cover-gallery{width:min(2080px,calc(100% - 200px));--photo-height:min(520px,calc(100svh - 580px),calc(40vw - 400px))}
+ .cover-university{align-self:end}
+ .cover-university img{height:auto;aspect-ratio:5/6;max-height:calc(var(--photo-height) - 38px)}
+ .cover-korea img{object-position:35% center}
+ .cover-journal img{object-position:right center}
+}
 @media(max-width:1100px){
  .cover-gallery{gap:12px;width:calc(100% - 40px);grid-template-columns:1fr 1fr 1.7fr 1fr 1fr;--photo-height:250px}
  .cover-picture figcaption strong{font-size:12px}.cover-picture figcaption{font-size:11px}

@@ -8,8 +8,9 @@
 .mobile-break{display:none}
 .cover-camps{display:flex;justify-content:center;gap:12px;margin-block:24px 32px}
 .cover-camps .btn{min-width:190px;gap:28px;justify-content:space-between}
-.cover-gallery{--photo-height:clamp(215px,calc(100svh - 570px),320px);display:grid;grid-template-columns:1fr 1fr 2fr 1fr 1fr;grid-template-areas:"far-left near-left center near-right far-right" "footer footer footer footer footer";align-items:start;gap:12px 16px;width:min(1600px,calc(100% - 48px));margin-inline:auto}
+.cover-gallery{--photo-height:clamp(215px,calc(100svh - 570px),320px);position:relative;display:grid;grid-template-columns:1fr 1fr 2fr 1fr 1fr;grid-template-areas:"far-left near-left center near-right far-right" "footer footer footer footer footer";align-items:start;gap:12px 16px;width:min(1600px,calc(100% - 48px));margin-inline:auto}
 .cover-picture{min-width:0;display:block;text-decoration:none;animation:cover-arrive 450ms var(--ease-out) both}
+.cover-picture[hidden]{display:none}
 .is-carousel .cover-picture{animation:none;transform-origin:top left}
 .cover-picture figcaption strong{text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px;text-decoration-thickness:1px}
 .cover-picture img{width:100%;height:var(--photo-height);object-fit:cover;border-radius:14px;transition:transform 180ms var(--ease-out)}
@@ -25,15 +26,22 @@
 .cover-emotions img{object-position:54% 75%}
 .cover-university img{object-position:49% center}
 .cover-journal img{object-position:75% center}
+.cover-forest img{object-position:center 78%}
+.cover-school-visit img{object-position:center 65%}
 .cover-picture figcaption{font-size:12px;margin-top:12px;line-height:1.5;min-height:64px}
 .cover-picture figcaption strong{display:block;color:var(--ink);font-weight:700;font-size:14px;margin-bottom:4px}
 .cover-picture figcaption>span{display:block}
 .gallery-footer{grid-area:footer;display:flex;justify-content:center;align-items:center;gap:28px}
-.carousel-controls{grid-area:controls;display:flex;align-items:center;justify-content:center;gap:8px;color:var(--muted);font-size:12px}
+.carousel-controls{display:contents}
 .carousel-controls[hidden]{display:none}
-.carousel-controls button{font:inherit;color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:999px;min-height:44px;padding:8px 16px;cursor:pointer}
+.carousel-controls button{display:grid;place-items:center;width:44px;height:44px;padding:0;color:var(--ink);background:rgba(255,255,255,.95);border:1px solid var(--line);border-radius:50%;cursor:pointer;z-index:2;transition:background 160ms ease,color 160ms ease}
+.carousel-controls button[hidden]{display:none}
 .carousel-controls button:hover{border-color:var(--blue);color:var(--blue)}
-#carousel-position{font-variant-numeric:tabular-nums;min-width:38px;margin-right:4px}
+.carousel-arrow{position:absolute;top:calc(var(--photo-height)/2 - 22px);box-shadow:0 2px 12px #123b6212}
+.carousel-previous{left:-16px}.carousel-next{right:-16px}
+.carousel-toggle{grid-area:center;align-self:start;justify-self:end;margin:10px}
+.carousel-toggle[data-paused="false"] .icon-play,.carousel-toggle[data-paused="true"] .icon-pause{display:none}
+.cover-gallery .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
 .cover-records-row{grid-area:records;text-align:center}
 .cover-records{font-size:14px;min-height:44px}
 .home-footer{border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
@@ -59,7 +67,10 @@
  .cover{padding-block:30px 20px}.cover-title h1{font-size:clamp(38px,9.3vw,70px);letter-spacing:-.06em}
  .cover-title p{font-size:17px;line-height:1.65;margin-top:14px}.mobile-break{display:block}
  .cover-camps{margin-block:22px 28px;gap:10px}.cover-camps .btn{min-width:0;flex:1;max-width:240px;padding:12px 14px;gap:8px;font-size:14px}
- .cover-gallery{grid-template-columns:1fr 1fr;grid-template-areas:"center center" "controls controls" "far-left near-right" "near-left far-right" "records records";gap:20px 14px}
+ .cover-gallery{grid-template-columns:1fr 1fr;grid-template-areas:"center center" "far-left near-right" "near-left far-right" "records records";gap:20px 14px}
+ .carousel-arrow{top:calc((100vw - 40px)*1013/3600 - 22px)}
+ .carousel-previous{left:-12px}.carousel-next{right:-12px}
+ .carousel-toggle{margin:8px}
  .gallery-footer{display:contents}
  .cover-picture[data-slot]{margin-top:0;animation-delay:0ms}
  .cover-picture[data-slot] img{height:auto;aspect-ratio:4/3;object-fit:cover}

@@ -9,10 +9,10 @@
 <meta name="description" content="영어로 소통하고 함께 활동하며 배우는 교육 캠프. 한국 교류와 미국 캠프, 지난 기록과 참여 안내를 만나보세요.">
 <link rel="icon" href="assets/fox-lc.png">
 <link rel="stylesheet" href="site.css">
-<link rel="stylesheet" href="home.css?v=20261023-carousel">
+<link rel="stylesheet" href="home.css?v=20261023-15-scenes">
 <script src="site.js" defer>
 </script>
-<script src="home-carousel.js?v=20261023-carousel" defer></script>
+<script src="home-carousel.js?v=20261023-15-scenes" defer></script>
 </head>
 <body id="top" class="home-page">
 <a class="skip-link" href="#main">본문으로 이동</a>
@@ -42,42 +42,103 @@
 <a class="btn btn-secondary" href="participate.html#usa-guide">미국 캠프 안내 <span aria-hidden="true">↗</span></a>
 </nav>
 <div id="camp-gallery" class="cover-gallery" role="region" aria-label="사진으로 보는 지난 캠프">
-<a class="cover-picture cover-school" data-slot="2" href="history.html#usa-2025">
+<a class="cover-picture cover-school" data-order="2" data-slot="2" href="history.html#usa-2025">
 <figure>
 <img src="assets/exchange.webp" width="1800" height="1013" alt="같은 테이블에 둘러앉아 함께 활동하는 한국과 미국 학생들" fetchpriority="high">
 <figcaption><strong>미국 초등학교에서 만난 친구들</strong><span>2025 미국 · 샌디에이고 · 스톤랜치 초등학교</span></figcaption>
 </figure>
 </a>
-<a class="cover-picture cover-korea" data-slot="0" href="history.html#korea-2024">
+<a class="cover-picture cover-korea" data-order="0" data-slot="0" href="history.html#korea-2024">
 <figure>
 <img src="assets/korea-sel-2024.jpeg" width="2400" height="1600" alt="함께 감정을 알아보며 손을 들고 참여하는 학생들" decoding="async">
 <figcaption><strong>표정으로 감정 알아보기</strong><span>2024 한국 · 폭스러닝센터</span></figcaption>
 </figure>
 </a>
-<a class="cover-picture cover-emotions" data-slot="3" href="history.html#korea-2025">
+<a class="cover-picture cover-emotions" data-order="3" data-slot="3" href="history.html#korea-2025">
 <figure>
 <img src="history-assets/day3.webp" width="1600" height="1200" alt="감정클레이 작품을 함께 들고 있는 한국과 미국 학생들" decoding="async">
 <figcaption><strong>함께 만든 감정클레이</strong><span>2025 한국 · 폭스러닝센터</span></figcaption>
 </figure>
 </a>
-<a class="cover-picture cover-university" data-slot="1" href="history.html#university-2025">
+<a class="cover-picture cover-university" data-order="1" data-slot="1" href="history.html#university-2025">
 <figure>
 <img src="assets/cover-university-2025.jpg" width="1200" height="676" alt="캘리포니아대학교 어바인 캠퍼스에 모인 학생들" loading="lazy" decoding="async">
 <figcaption><strong>UC Irvine 대학 탐방</strong><span>2025 미국 · 어바인</span></figcaption>
 </figure>
 </a>
-<a class="cover-picture cover-journal" data-slot="4" href="history.html#portfolio-2025">
+<a class="cover-picture cover-journal" data-order="4" data-slot="4" href="history.html#portfolio-2025">
 <figure>
 <img src="assets/portfolio.webp" width="1800" height="1013" alt="테이블에 앉아 캠프에서의 경험을 기록하는 학생들" loading="lazy" decoding="async">
 <figcaption><strong>하루의 경험 기록하기</strong><span>2025 미국 · 어바인</span></figcaption>
 </figure>
 </a>
-<div class="gallery-footer">
-<div class="carousel-controls" hidden>
-<span id="carousel-position" aria-label="사진 순서">1 / 5</span>
-<button id="carousel-toggle" type="button" aria-controls="camp-gallery">일시정지</button>
-<button id="carousel-next" type="button" aria-controls="camp-gallery">다음 사진 <span aria-hidden="true">→</span></button>
+<a class="cover-picture" data-order="5" href="history.html#korea-gathering-2024" hidden>
+<figure>
+<img src="history-assets/gallery-9.webp" width="1600" height="1067" alt="폭스러닝센터에서 함께 앉아 활동하는 학생들" loading="lazy" decoding="async">
+<figcaption><strong>폭스러닝센터에서 함께한 시간</strong><span>2024 한국 · 폭스러닝센터</span></figcaption>
+</figure>
+</a>
+<a class="cover-picture" data-order="6" href="history.html#lego-2023" hidden>
+<figure>
+<img src="history-assets/school-building-2023.jpeg" width="1280" height="960" alt="레고 모형과 화면의 설명을 함께 살펴보는 학생들" loading="lazy" decoding="async">
+<figcaption><strong>함께하는 레고 만들기</strong><span>2023 미국 · 스톤랜치 초등학교</span></figcaption>
+</figure>
+</a>
+<a class="cover-picture" data-order="7" href="history.html#seaworld-2026" hidden>
+<figure>
+<img src="history-assets/project-2026-seaworld.webp" width="1600" height="1200" alt="씨월드에서 함께한 학생들과 인솔자" loading="lazy" decoding="async">
+<figcaption><strong>씨월드에서 함께한 시간</strong><span>2026 미국 · 샌디에이고</span></figcaption>
+</figure>
+</a>
+<a class="cover-picture" data-order="8" href="history.html#friend-tree-2024" hidden>
+<figure>
+<img src="history-assets/usa-friend-tree-2024.jpeg" width="2400" height="1800" alt="완성된 포스트잇 나무 옆에 모인 참가자들" loading="lazy" decoding="async">
+<figcaption><strong>포스트잇 나무와 함께</strong><span>2024 미국 · 스톤랜치 초등학교</span></figcaption>
+</figure>
+</a>
+<a class="cover-picture cover-forest" data-order="9" href="history.html#muir-2026" hidden>
+<figure>
+<img src="history-assets/project-2026-muir.webp" width="1200" height="1600" alt="뮤어우즈 숲길에 있는 캠프 참가자들" loading="lazy" decoding="async">
+<figcaption><strong>뮤어우즈 숲길 탐방</strong><span>2026 미국 · 뮤어우즈</span></figcaption>
+</figure>
+</a>
+<a class="cover-picture" data-order="10" href="history.html#teamwork-2025" hidden>
+<figure>
+<img src="history-assets/student-teamwork-2025.jpeg" width="4000" height="2252" alt="테이블에서 종이와 막대로 모형을 만드는 학생들" loading="lazy" decoding="async">
+<figcaption><strong>종이와 막대로 함께 만들기</strong><span>2025 미국 · 스톤랜치 초등학교</span></figcaption>
+</figure>
+</a>
+<a class="cover-picture" data-order="11" href="history.html#drawing-2023" hidden>
+<figure>
+<img src="history-assets/school-drawing-2023.jpeg" width="1280" height="960" alt="같은 테이블에서 색연필로 그림을 그리는 학생들" loading="lazy" decoding="async">
+<figcaption><strong>같은 테이블에서 그림 그리기</strong><span>2023 미국 · 스톤랜치 초등학교</span></figcaption>
+</figure>
+</a>
+<a class="cover-picture" data-order="12" href="history.html#treehouse-2024" hidden>
+<figure>
+<img src="history-assets/usa-treehouse-2024.jpeg" width="2400" height="1800" alt="트리하우스 모형과 노트북의 코딩 화면을 함께 살펴보는 학생들" loading="lazy" decoding="async">
+<figcaption><strong>함께 만드는 트리하우스</strong><span>2024 미국 · 스톤랜치 초등학교</span></figcaption>
+</figure>
+</a>
+<a class="cover-picture" data-order="13" href="history.html#vcom-2026" hidden>
+<figure>
+<img src="history-assets/vcom-stethoscope-2026.webp" width="1800" height="1350" alt="진행자의 안내를 받으며 청진기를 사용하는 학생" loading="lazy" decoding="async">
+<figcaption><strong>청진기로 몸의 소리 듣기</strong><span>2026 미국 · 어번 · 의학체험</span></figcaption>
+</figure>
+</a>
+<a class="cover-picture cover-school-visit" data-order="14" href="history.html#school-visit-2023" hidden>
+<figure>
+<img src="history-assets/school-visit-2023.jpeg" width="1280" height="1707" alt="캠프 현수막을 들고 스톤랜치 초등학교 앞에 모인 참가자들" loading="lazy" decoding="async">
+<figcaption><strong>스톤랜치 초등학교 방문</strong><span>2023 미국 · 샌디에이고</span></figcaption>
+</figure>
+</a>
+<div class="carousel-controls" role="group" aria-label="캠프 사진 넘기기" hidden>
+<button id="carousel-previous" class="carousel-arrow carousel-previous" type="button" aria-label="이전 사진" aria-controls="camp-gallery"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m14 5-7 7 7 7"/></svg></button>
+<button id="carousel-next" class="carousel-arrow carousel-next" type="button" aria-label="다음 사진" aria-controls="camp-gallery"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m10 5 7 7-7 7"/></svg></button>
+<button id="carousel-toggle" class="carousel-toggle" type="button" aria-label="사진 자동 넘김 멈추기" title="사진 자동 넘김 멈추기" aria-controls="camp-gallery" data-paused="false"><svg class="icon-pause" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M5 4h3v12H5zm7 0h3v12h-3z"/></svg><svg class="icon-play" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m6 3 11 7-11 7z"/></svg></button>
+<span id="carousel-status" class="sr-only" aria-live="polite" aria-atomic="true"></span>
 </div>
+<div class="gallery-footer">
 <div class="cover-records-row">
 <a class="text-link cover-records" href="history.html">2023–2026 캠프 기록 <span aria-hidden="true">→</span></a>
 </div>

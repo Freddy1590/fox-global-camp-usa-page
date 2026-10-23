@@ -23,7 +23,11 @@
 .participation-page .summary-note{font-size:13px;margin-top:10px;line-height:1.6}
 .participation-page .enrollment-actions{display:flex;gap:4px 20px;flex-wrap:wrap;margin-top:8px}
 .participation-page .enrollment-actions .text-link{min-height:44px;font-size:14px;padding-block:8px}
-.participation-page .guide-links{margin-top:28px}
+.participation-page .guide-links{margin-top:28px;align-items:center;gap:4px 24px}
+.participation-page .guide-links>span{font-size:14px}
+.participation-page .guide-links a{font-weight:500}
+.participation-page .enrollment-actions .btn{margin-top:12px}
+.participation-page #apply .btn:disabled{cursor:not-allowed;background:var(--mist);border-color:var(--line);color:var(--muted)}
 .participation-page .encounter-gallery{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:36px}
 .participation-page .encounter-story .photo img{aspect-ratio:1.6;object-fit:cover}
 .participation-page .encounter-story:first-child .photo img{object-position:50% 40%}

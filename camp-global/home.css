@@ -10,6 +10,7 @@
 .cover-camps .btn{min-width:190px;gap:28px;justify-content:space-between}
 .cover-gallery{--photo-height:clamp(215px,calc(100svh - 510px),320px);display:grid;grid-template-columns:1fr 1fr 2fr 1fr 1fr;grid-template-areas:"korea university school emotions journal";align-items:start;gap:16px;width:min(1600px,calc(100% - 48px));margin-inline:auto}
 .cover-picture{min-width:0;display:block;text-decoration:none;animation:cover-arrive 450ms var(--ease-out) both}
+.cover-picture figcaption strong{text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px;text-decoration-thickness:1px}
 .cover-picture img{width:100%;height:var(--photo-height);object-fit:cover;border-radius:14px;transition:transform 180ms var(--ease-out)}
 .cover-school{grid-area:school}
 .cover-school img{object-position:74% center}

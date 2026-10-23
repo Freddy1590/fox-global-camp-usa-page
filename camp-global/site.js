@@ -1,14 +1,12 @@
 // 신청 URL은 사용자에게 받은 뒤 이 값에 넣습니다.
 const applicationUrl = '';
 const applicationButton = document.getElementById('apply-button');
-applicationButton?.addEventListener('click', () => {
-  if (applicationUrl) {
-    window.location.assign(applicationUrl);
-    return;
-  }
-  document.getElementById('application-status').hidden = false;
-  applicationButton.setAttribute('aria-expanded', 'true');
-});
+if (applicationButton && applicationUrl) {
+  applicationButton.disabled = false;
+  applicationButton.textContent = '참가 신청';
+  document.getElementById('application-status').textContent = '신청 페이지에서 참가 정보를 입력해주세요.';
+  applicationButton.addEventListener('click', () => window.location.assign(applicationUrl));
+}
 const copyButton = document.getElementById('copy-kakao');
 copyButton?.addEventListener('click', async () => {
   const status = document.getElementById('copy-status');

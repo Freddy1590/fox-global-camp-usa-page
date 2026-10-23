@@ -1,0 +1,58 @@
+.home-page{min-height:100svh;display:flex;flex-direction:column}
+.cover-main{flex:1;display:flex;align-items:center;background:#fff}
+.cover{width:100%;padding-block:clamp(24px,4svh,44px) 18px}
+.cover-title{text-align:center}
+.cover-title h1{font-family:Arial,Pretendard,sans-serif;font-size:clamp(54px,6.7vw,100px);letter-spacing:-.065em;line-height:1.06;font-weight:800}
+.cover-title h1 span{color:var(--blue)}
+.cover-title p{margin:18px auto 0;font-size:clamp(18px,1.7vw,24px);font-weight:550;letter-spacing:-.03em}
+.mobile-break{display:none}
+.cover-camps{display:flex;justify-content:center;gap:12px;margin-block:24px 32px}
+.cover-camps .btn{min-width:190px;gap:28px;justify-content:space-between}
+.cover-gallery{--photo-height:clamp(215px,calc(100svh - 510px),320px);display:grid;grid-template-columns:1fr 1fr 2fr 1fr 1fr;grid-template-areas:"korea university school emotions journal";align-items:start;gap:16px;width:min(1600px,calc(100% - 48px));margin-inline:auto}
+.cover-picture{min-width:0;display:block;text-decoration:none;animation:cover-arrive 450ms var(--ease-out) both}
+.cover-picture img{width:100%;height:var(--photo-height);object-fit:cover;border-radius:14px;transition:transform 180ms var(--ease-out)}
+.cover-school{grid-area:school}
+.cover-school img{object-position:74% center}
+.cover-korea{grid-area:korea;margin-top:76px;animation-delay:80ms}
+.cover-korea img{height:calc(var(--photo-height) - 76px);object-position:45% center}
+.cover-emotions{grid-area:emotions;margin-top:38px;animation-delay:40ms}
+.cover-emotions img{height:calc(var(--photo-height) - 38px);object-position:54% 75%}
+.cover-university{grid-area:university;margin-top:38px;animation-delay:40ms}
+.cover-university img{height:calc(var(--photo-height) - 38px);object-position:49% center}
+.cover-journal{grid-area:journal;margin-top:76px;animation-delay:80ms}
+.cover-journal img{height:calc(var(--photo-height) - 76px);object-position:75% center}
+.cover-picture figcaption{font-size:12px;margin-top:12px;line-height:1.5}
+.cover-picture figcaption strong{display:block;color:var(--ink);font-weight:700;font-size:14px;margin-bottom:4px}
+.cover-picture figcaption>span{display:block}
+.cover-records-row{text-align:center;margin-top:20px}
+.cover-records{font-size:14px;min-height:44px}
+.home-footer{border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+.home-footer>.wrap{display:flex;align-items:center;gap:24px;min-height:46px}
+.home-footer a{display:inline-flex;align-items:center;min-height:40px}
+.home-footer a:first-of-type{margin-left:auto}
+@keyframes cover-arrive{from{opacity:.45;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@media(hover:hover) and (pointer:fine){.cover-picture:hover img{transform:translateY(-4px)}.cover-picture:hover strong{color:var(--blue)}}
+@media(max-width:1100px){
+ .cover-gallery{gap:12px;width:calc(100% - 40px);grid-template-columns:1fr 1fr 1.7fr 1fr 1fr;--photo-height:250px}
+ .cover-picture figcaption strong{font-size:12px}.cover-picture figcaption{font-size:11px}
+}
+@media(min-width:821px) and (max-height:760px){
+ .cover{padding-block:20px 12px}.cover-title h1{font-size:72px}
+ .cover-title p{margin-top:12px;font-size:20px}.cover-camps{margin-block:18px 24px}
+ .cover-records-row{margin-top:12px}
+}
+@media(max-width:820px){
+ .cover{padding-block:30px 20px}.cover-title h1{font-size:clamp(38px,9.3vw,70px);letter-spacing:-.06em}
+ .cover-title p{font-size:17px;line-height:1.65;margin-top:14px}.mobile-break{display:block}
+ .cover-camps{margin-block:22px 28px;gap:10px}.cover-camps .btn{min-width:0;flex:1;max-width:240px;padding:12px 14px;gap:8px;font-size:14px}
+ .cover-gallery{grid-template-columns:1fr 1fr;grid-template-areas:"school school" "korea emotions" "university journal";gap:24px 14px}
+ .cover-picture{margin-top:0;animation-delay:0ms}
+ .cover-picture img{height:auto;aspect-ratio:4/3;object-fit:cover}
+ .cover-school img{aspect-ratio:1800/1013;object-fit:contain}
+ .cover-university img,.cover-journal img{aspect-ratio:1800/1013;object-fit:contain}
+ .cover-picture figcaption{font-size:11px;margin-top:9px}.cover-picture figcaption strong{font-size:13px}
+ .cover-school figcaption strong{font-size:15px}
+ .cover-records-row{margin-top:20px}
+ .home-footer>.wrap{gap:6px 16px;flex-wrap:wrap;padding-block:10px;justify-content:center}.home-footer a:first-of-type{margin-left:0}.home-footer>.wrap>span{width:100%;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){.cover-picture{animation:none}.cover-picture img{transition:none}.cover-picture:hover img{transform:none}}

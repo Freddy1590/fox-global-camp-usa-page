@@ -21,3 +21,19 @@ copyButton?.addEventListener('click', async () => {
 // Keyboard actions stay immediate, including native disclosure controls.
 document.addEventListener('keydown', () => document.documentElement.classList.add('keyboard-input'));
 document.addEventListener('pointerdown', () => document.documentElement.classList.remove('keyboard-input'));
+
+// Preserve native navigation; only the requested pointer journey gets a brief arrival fade.
+const introTransitionKey = 'fox-camp-intro-transition';
+try {
+  const startedAt = Number(sessionStorage.getItem(introTransitionKey));
+  sessionStorage.removeItem(introTransitionKey);
+  if (document.body.classList.contains('about-page') && startedAt > 0 &&
+      Date.now() - startedAt < 5000 && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelector('main')?.animate([{ opacity: .65 }, { opacity: 1 }], { duration: 200, easing: 'ease-out' });
+  }
+} catch { /* File previews can block session storage; links still navigate normally. */ }
+document.querySelector('[data-camp-intro]')?.addEventListener('click', event => {
+  if (event.defaultPrevented || event.detail === 0 || event.button !== 0 ||
+      event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  try { sessionStorage.setItem(introTransitionKey, String(Date.now())); } catch {}
+});

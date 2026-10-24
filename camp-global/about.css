@@ -1,5 +1,5 @@
 .about-page .about-intro{padding:40px 0 0;background:var(--white)}
-.about-page .about-intro h1{max-width:1060px;font-size:clamp(34px,3.2vw,46px);line-height:1.2;letter-spacing:-.035em}
+.about-page .about-intro h1{max-width:1060px}
 .about-page .about-intro p{margin:16px 0 0;color:var(--muted);font-size:16px}
 .about-page .page-links{gap:8px 36px;margin-top:56px;padding:10px 0;border-block:1px solid var(--line)}
 .about-page #encounters{padding-top:32px}
@@ -44,9 +44,6 @@
 .about-page .journey h3{font-size:23px;line-height:1.35;margin-top:12px}
 .about-page .journey p{color:var(--muted);line-height:1.85}
 .about-page .journey p br{display:none}
-.about-page #preparation .disclosure{max-width:1000px}
-.about-page #preparation .details-body{max-width:850px;color:var(--muted);font-size:16px;line-height:1.85}
-.about-page #preparation .details-body h3{color:var(--ink)}
 .about-page .preparation-note{font-size:14px;margin-top:20px}
 .about-page .support-section{background:var(--mist)}
 .about-page .support-section .wrap{display:flex;align-items:flex-end;justify-content:space-between;gap:40px}
@@ -81,7 +78,6 @@
 }
 @media(max-width:560px){
   .about-page .about-intro{padding-top:28px}
-  .about-page .about-intro h1{font-size:clamp(30px,8vw,38px);line-height:1.22}
   .about-page .page-links{gap:0 20px}
   .about-page .page-links a{font-size:13px}
   .about-page .encounter-story:first-child,.about-page .encounter-story:nth-child(2){margin:0}

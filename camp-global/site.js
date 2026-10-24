@@ -18,6 +18,20 @@ copyButton?.addEventListener('click', async () => {
   }
 });
 
+// Show the mobile shortcut only when an existing inquiry action is off screen.
+const mobileContact = document.querySelector('.mobile-contact');
+if (mobileContact && 'IntersectionObserver' in window) {
+  const visibleContacts = new Set();
+  const inquiryObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) visibleContacts.add(entry.target);
+      else visibleContacts.delete(entry.target);
+    });
+    mobileContact.hidden = visibleContacts.size > 0;
+  });
+  document.querySelectorAll('a.btn[href="#contact"], #contact').forEach(target => inquiryObserver.observe(target));
+}
+
 // Keyboard actions stay immediate, including native disclosure controls.
 document.addEventListener('keydown', () => document.documentElement.classList.add('keyboard-input'));
 document.addEventListener('pointerdown', () => document.documentElement.classList.remove('keyboard-input'));

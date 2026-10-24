@@ -77,8 +77,6 @@ summary:after{content:"+";position:absolute;right:6px;top:19px;color:var(--blue)
 details[open]>summary:after{content:"−"}
 .details-body{padding:0 24px 26px 0;max-width:78ch}
 .details-body h3{font-size:20px;margin-top:24px}
-.plain-steps{padding-left:24px}
-.plain-steps li+li{margin-top:10px}
 .details-body .muted{font-size:14px}
 .faq-list{max-width:900px;padding-bottom:50px}
 .faq-list .details-body{max-width:76ch}
@@ -204,7 +202,6 @@ h3{font-size:23px}
 .contact-prompt h2{font-size:26px}
 summary{font-size:17px;padding-block:20px}
 .details-body{padding-right:0}
-.plain-steps{padding-left:22px}
 .footer-contact{font-size:13px}
 .site-footer{padding:26px 0}
 .preparation-teaser h3{font-size:25px}
@@ -223,7 +220,7 @@ summary{font-size:17px;padding-block:20px}
 .wrap{width:min(1280px,calc(100% - 96px))}
 .section{padding-block:88px}
 h1{font-size:clamp(36px,4.6vw,64px);font-weight:800;line-height:1.16}
-h2{font-size:clamp(30px,3.2vw,44px);line-height:1.24}
+h2{font-size:clamp(28px,3vw,40px);line-height:1.24}
 h3{line-height:1.35}
 p{line-height:1.8}
 .btn{border-radius:999px;min-height:50px;padding:12px 23px;transition:transform 140ms var(--ease-out),background-color 160ms ease}

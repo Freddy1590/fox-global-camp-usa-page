@@ -31,6 +31,7 @@
 .history-pair { margin-top:26px; }
 .history-pair > *, .additional-grid > *, .video-grid > * { min-width:0; }
 .record-story { scroll-margin-top:128px; }
+.record-story > .record-story { margin-top:32px; }
 .record-story h4 { margin:0 0 12px; font-size:20px; line-height:1.4; }
 .record-story .body-copy { margin-top:0; }
 #family-2024 { margin-top:24px; padding:20px; background:var(--mist); border-radius:14px; }
@@ -72,6 +73,7 @@
 .photo-dialog #dialog-photo { display:block; width:100%; max-height:calc(100dvh - 190px); object-fit:contain; }
 #photo-caption { margin:14px 0 0; font-size:15px; line-height:1.6; }
 .history-main a:focus-visible, .history-main summary:focus-visible, .history-main button:focus-visible, .photo-dialog button:focus-visible { outline:3px solid var(--blue); outline-offset:4px; }
+.history-main .video-preview:focus-visible { outline:4px solid #fff; outline-offset:-8px; box-shadow:inset 0 0 0 5px var(--blue); }
 @media (max-width:760px) {
  .history-year { padding:42px 0; scroll-margin-top:110px; }
  .year-nav .wrap { gap:8px; padding-top:14px; padding-bottom:14px; }

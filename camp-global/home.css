@@ -1,6 +1,6 @@
 .home-page{min-height:100svh;display:flex;flex-direction:column}
 .cover-main{flex:1;display:flex;align-items:center;background:#fff}
-.cover{width:100%;padding-block:clamp(24px,4svh,44px) 18px;overflow-x:clip}
+.cover{width:100%;padding-block:clamp(24px,4svh,44px) 14px;overflow-x:clip}
 .cover-title{text-align:center}
 .cover-title h1{font-family:Arial,Pretendard,sans-serif;font-size:clamp(54px,6.7vw,100px);letter-spacing:-.065em;line-height:1.06;font-weight:800}
 .cover-title h1 span{color:var(--blue)}
@@ -11,8 +11,7 @@
 .cover-gallery{--photo-height:clamp(215px,calc(100svh - 570px),320px);position:relative;display:grid;grid-template-columns:1fr 1fr 2fr 1fr 1fr;grid-template-areas:"far-left near-left center near-right far-right" "footer footer footer footer footer";align-items:start;gap:12px 16px;width:min(1600px,calc(100% - 48px));margin-inline:auto}
 .cover-picture{min-width:0;display:block;text-decoration:none;animation:cover-arrive 450ms var(--ease-out) both}
 .cover-picture[hidden]{display:none}
-.is-carousel .cover-picture{animation:none;transform-origin:top left}
-.is-carousel .cover-picture{touch-action:pan-y pinch-zoom;user-select:none;-webkit-user-select:none;cursor:grab}
+.is-carousel .cover-picture{animation:none;transform-origin:top left;touch-action:pan-y pinch-zoom;user-select:none;-webkit-user-select:none;cursor:grab}
 .is-carousel .cover-picture img{-webkit-user-drag:none}
 .is-dragging .cover-picture{cursor:grabbing}
 .is-dragging .cover-picture:hover img{transform:none;transition:none}
@@ -48,7 +47,7 @@
 .cover-gallery .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
 .cover-intro{grid-area:intro;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:0 20px;text-align:center;font-size:14px}
 .cover-intro p{margin:0;color:var(--muted)}
-.cover-intro .text-link{font-size:14px;min-height:44px;color:var(--blue)}
+.cover-intro .text-link{font-size:18px;line-height:1.5;min-height:48px;color:var(--blue);text-decoration-thickness:2px;text-underline-offset:7px}
 .home-footer{border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
 .home-footer>.wrap{display:flex;align-items:center;gap:24px;min-height:46px}
 .home-footer a{display:inline-flex;align-items:center;min-height:40px}
@@ -56,7 +55,9 @@
 @keyframes cover-arrive{from{opacity:.45;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 @media(hover:hover) and (pointer:fine){.cover-picture:hover img{transform:translateY(-4px)}.cover-picture:hover strong{color:var(--blue)}}
 @media(min-width:1800px) and (min-height:900px){
- .cover-gallery{width:min(2080px,calc(100% - 200px));--photo-height:min(520px,calc(100svh - 590px),calc(40vw - 400px))}
+ .cover-title h1{font-size:clamp(100px,5.5vw,132px)}
+ .cover{padding-top:28px}
+ .cover-gallery{width:min(2080px,calc(100% - 200px));--photo-height:min(520px,calc(100svh - 620px),calc(40vw - 400px))}
  .cover-korea img{object-position:35% center}
  .cover-journal img{object-position:right center}
 }

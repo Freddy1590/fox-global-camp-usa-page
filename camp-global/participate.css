@@ -1,5 +1,4 @@
 .participation-page .participation-intro{padding:32px 0;background:var(--mist)}
-.participation-page .participation-intro .lead{margin:12px 0 20px;max-width:60ch;font-weight:500;font-size:18px}
 .participation-page .country-choice{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:810px}
 .participation-page .country-choice a{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 22px;background:#fff;border:1px solid var(--line);border-radius:16px;text-decoration:none;transition:border-color .2s,background-color .2s}
 .participation-page .country-choice a:hover{border-color:var(--blue);background:#f8fcff}
@@ -11,7 +10,6 @@
 .participation-page .camp-guide .section-heading{margin-bottom:32px}
 .participation-page .camp-overview{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(320px,1fr);gap:36px;align-items:start}
 .participation-page .camp-feature-picture img{aspect-ratio:1.6;object-fit:cover;object-position:50% 45%}
-.participation-page .camp-overview-copy{padding-top:24px;max-width:66ch}
 .participation-page .enrollment-panel{padding:24px;background:var(--mist);border-radius:18px}
 .participation-page .enrollment-panel h3{font-size:19px;margin-bottom:16px}
 .participation-page .enrollment-summary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px;border:0}
@@ -20,43 +18,18 @@
 .participation-page .enrollment-summary dd{line-height:1.4}
 .participation-page .enrollment-summary strong{font-size:18px;line-height:1.4}
 .participation-page .summary-note{font-size:13px;margin-top:10px;line-height:1.6}
-.participation-page .enrollment-actions{display:flex;gap:4px 20px;flex-wrap:wrap;margin-top:8px}
-.participation-page .enrollment-actions .text-link{min-height:44px;font-size:14px;padding-block:8px}
 .participation-page .guide-links{margin-top:28px;align-items:center;gap:4px 24px}
-.participation-page .guide-links>span{font-size:14px}
 .participation-page .guide-links a{font-weight:500}
-.participation-page .enrollment-actions .btn{margin-top:12px}
 .participation-page #apply .btn:disabled{cursor:not-allowed;background:var(--mist);border-color:var(--line);color:var(--muted)}
-.participation-page .encounter-gallery{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:36px}
-.participation-page .encounter-story .photo img{aspect-ratio:1.6;object-fit:cover}
-.participation-page .encounter-story:first-child .photo img{object-position:50% 40%}
-.participation-page .encounter-story:nth-child(2) .photo img{object-position:50% 60%}
-.participation-page .encounter-copy{padding-top:24px}
-.participation-page .encounter-copy h3{font-size:27px}
-.participation-page .encounter-copy p{margin-top:14px;max-width:50ch}
-.participation-page .encounter-copy .text-link{margin-top:12px}
-.participation-page .family-encounter{display:grid;grid-template-columns:minmax(220px,.7fr) minmax(0,1.3fr);gap:36px;margin-top:48px;padding-top:32px;border-top:1px solid var(--line)}
-.participation-page .family-encounter h3{font-size:25px}
-.participation-page .family-encounter .text-link{margin-top:10px}
-.participation-page .preparation-teaser{margin:0;padding:0;border:0}
-.participation-page .preparation-teaser h3{font-size:clamp(25px,2.7vw,34px)}
-.participation-page .preparation-teaser .status-label{margin-bottom:10px}
 .participation-page .support-layout{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.3fr);gap:64px}
 .participation-page .support-layout .section-heading{margin-bottom:0}
 .participation-page .support-layout .learning-list>div{grid-template-columns:140px 1fr;gap:20px}
-.participation-page .support-note{padding:26px 28px;background:#fff;border-radius:16px}
-.participation-page .support-note h3{font-size:23px}
-.participation-page .support-note p{font-size:16px}
-.participation-page .support-note .text-link{margin-top:10px}
 .participation-page .steps-inline{gap:36px;margin-top:44px}
 .participation-page .steps-inline li{border-top:2px solid var(--sky);padding-top:24px}
 .participation-page .steps-inline li:before{font-size:20px;margin-bottom:16px}
 .participation-page .korea-overview{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:48px;align-items:start}
 .participation-page .korea-overview .photo img{aspect-ratio:1.5;object-fit:cover}
-.participation-page .korea-photo-links{margin-top:14px}
 .participation-page .korea-overview-copy>p:first-child{font-size:21px;font-weight:650;line-height:1.6}
-.participation-page .korea-overview-copy>h3{margin-top:28px;font-size:27px}
-.participation-page .korea-overview-copy>h3+p{margin-top:14px}
 .participation-page .korea-overview-copy>.text-link{margin-top:12px}
 .participation-page .korea-next{margin-top:26px;padding-top:24px;border-top:1px solid var(--line)}
 .participation-page .korea-next h3{font-size:21px}
@@ -86,21 +59,14 @@ html{scroll-padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
 .participation-page .participation-intro{padding:28px 0}
 .participation-page .camp-overview,.participation-page .support-layout,.participation-page .korea-overview{grid-template-columns:1fr;gap:28px}
 .participation-page .camp-feature-picture img{aspect-ratio:16/9}
-.participation-page .camp-overview-copy{max-width:70ch;padding-top:20px}
 .participation-page .enrollment-panel{order:-1;padding:24px}
 .participation-page .camp-overview{gap:20px}
-.participation-page .encounter-gallery{gap:26px}
-.participation-page .encounter-copy h3{font-size:24px}
-.participation-page .encounter-copy p{font-size:16px}
-.participation-page .family-encounter{grid-template-columns:1fr;gap:16px}
-.participation-page .family-encounter h3{font-size:24px}
 .participation-page .support-layout .learning-list>div{grid-template-columns:150px 1fr;gap:20px}
 .participation-page .korea-overview .photo img{aspect-ratio:16/10}
 .participation-page .korea-overview-copy{max-width:70ch}
 .participation-page .steps-inline{gap:24px}
 }
 @media(max-width:560px){
-.participation-page .participation-intro .lead{font-size:17px;margin-bottom:20px}
 .participation-page .country-choice{gap:10px}
 .participation-page .country-choice a{padding:14px 15px;gap:6px;border-radius:13px;align-items:flex-start}
 .participation-page .country-choice strong{font-size:18px}
@@ -110,16 +76,10 @@ html{scroll-padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
 .participation-page .korea-overview-copy>p:first-child{font-size:19px}
 .participation-page .enrollment-panel{padding:20px}
 .participation-page .enrollment-summary strong{font-size:17px}
-.participation-page .encounter-gallery{grid-template-columns:1fr;gap:34px}
-.participation-page .encounter-copy{padding-top:18px}
-.participation-page .encounter-story .photo img{aspect-ratio:16/10}
-.participation-page .family-encounter{margin-top:34px;padding-top:26px}
 .participation-page .support-layout .learning-list>div{grid-template-columns:1fr;gap:8px}
-.participation-page .support-note{padding:24px}
 .participation-page .steps-inline{margin-top:30px;gap:24px}
 .participation-page .steps-inline li{padding-top:18px}
 .participation-page .steps-inline li:before{margin-bottom:10px}
-.participation-page .korea-overview-copy>h3{font-size:26px}
 .participation-page .apply-section{padding:18px 0}
 .participation-page .contact-options{gap:16px}
 .participation-page .phone-card,.participation-page .kakao-card{padding:24px}

@@ -17,7 +17,6 @@
 .participation-page .enrollment-summary dt{font-size:13px;margin-bottom:4px}
 .participation-page .enrollment-summary dd{line-height:1.4}
 .participation-page .enrollment-summary strong{font-size:18px;line-height:1.4}
-.participation-page .summary-note{font-size:13px;margin-top:10px;line-height:1.6}
 .participation-page .guide-links{margin-top:28px;align-items:center;gap:4px 24px}
 .participation-page .guide-links a{font-weight:500}
 .participation-page #apply .btn:disabled{cursor:not-allowed;background:var(--mist);border-color:var(--line);color:var(--muted)}

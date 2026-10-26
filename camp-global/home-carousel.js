@@ -7,7 +7,7 @@
   const status = document.getElementById('carousel-status');
   const pictures = [...(gallery?.querySelectorAll('.cover-picture') || [])]
     .sort((a, b) => Number(a.dataset.order) - Number(b.dataset.order));
-  if (!gallery || !controls || !toggle || !previous || !next || pictures.length !== 15) return;
+  if (!gallery || !controls || !toggle || !previous || !next || pictures.length < 5) return;
   if (pictures.some((picture, index) => Number(picture.dataset.order) !== index || !picture.querySelector('img'))) return;
 
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');

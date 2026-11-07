@@ -20,6 +20,12 @@
 .about-page .family-story{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;background:var(--mist);padding:40px;margin-block:56px}
 .about-page .family-story>p{color:var(--muted)}
 .about-page .family-story .eyebrow{margin-bottom:12px}
+.about-page .university-visual{position:relative;overflow:hidden;border-radius:12px}
+/* Keep the overlay in the sky so the students remain unobscured. */
+.about-page .university-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,31,61,.82),rgba(10,31,61,.58) 22%,transparent 40%);pointer-events:none}
+.about-page .university-visual h3{position:absolute;z-index:1;inset:0 0 auto;padding:clamp(28px,3.5vw,48px);color:#fff;font-size:clamp(32px,3.2vw,44px);line-height:1.25}
+.about-page .university-story .experience-copy{max-width:880px;margin-top:28px}
+.about-page .university-story .experience-copy>p:first-child{margin-top:0}
 .about-page .preparation-section{border-block:1px solid var(--line)}
 .about-page .camp-process{list-style:none;margin:0;padding:0;counter-reset:camp-step}
 .about-page .camp-process>li{display:grid;grid-template-columns:1fr 1fr;gap:64px;padding-block:32px;border-top:1px solid var(--line);counter-increment:camp-step}
@@ -60,6 +66,10 @@
   .about-page .experience-copy .text-link{margin-top:12px}
   .about-page .family-story{padding:28px 24px;margin-block:40px;gap:16px}
   .about-page .family-story .eyebrow{margin-bottom:10px}
+  .about-page .university-visual{overflow:visible}
+  .about-page .university-visual::after{display:none}
+  .about-page .university-visual h3{position:static;padding:24px 0 0;color:var(--ink);font-size:25px;line-height:1.35}
+  .about-page .university-story .experience-copy{margin-top:22px}
   .about-page .camp-process>li{padding-block:26px;gap:18px}
   .about-page .process-title{padding-left:48px}
   .about-page .process-title::before{font-size:26px}

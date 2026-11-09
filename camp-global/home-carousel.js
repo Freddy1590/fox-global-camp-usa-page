@@ -73,7 +73,7 @@
 
   function schedule() {
     clearTimeout(timer);
-    if (!busy && !gesture && canPlay()) timer = setTimeout(() => advance(1, false, false), 5000);
+    if (!busy && !gesture && canPlay()) timer = setTimeout(() => advance(1, false, false), 3000);
   }
 
   function updateToggle() {

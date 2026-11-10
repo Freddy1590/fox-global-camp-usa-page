@@ -1,4 +1,4 @@
-:root{--white:#fff;--mist:#edf7fe;--sky:#9bdcf8;--blue:#145cd7;--ink:#123b62;--muted:#52687e;--line:#d6e5ee}
+:root{--white:#fff;--mist:#f4f5f4;--sky:#cbd7dc;--blue:#145cd7;--ink:#202b34;--muted:#59636d;--line:#dce0e2}
 *{box-sizing:border-box}
 html{scroll-padding-top:24px}
 body{margin:0;background:var(--white);color:var(--ink);font-family:Pretendard,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;font-size:17px;line-height:1.75;word-break:keep-all;overflow-wrap:break-word}
@@ -215,7 +215,7 @@ summary{font-size:17px;padding-block:20px}
 
 
 
-/* Shared editorial system: white reading surfaces, sky accents, pill actions. */
+/* Shared editorial system: neutral reading surfaces, blue actions. */
 :root{--ease-out:cubic-bezier(.23,1,.32,1)}
 .wrap{width:min(1280px,calc(100% - 96px))}
 .section{padding-block:88px}

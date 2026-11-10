@@ -1,5 +1,5 @@
 .home-page{--hero-blue:#075eae;min-height:100svh;display:flex;flex-direction:column;background:var(--hero-blue)}
-.home-page .site-header{position:absolute;inset:0 0 auto;z-index:3;border:0;background:linear-gradient(180deg,#052445b8,transparent);color:white}
+.home-page .site-header{position:absolute;inset:0 0 auto;z-index:3;border:0;background:linear-gradient(180deg,#052445c9,#052445a6 65%,transparent);color:white}
 .home-page .header-inner{width:calc(100% - 80px);max-width:1800px;min-height:96px}
 .home-page .brand img{filter:brightness(0) invert(1)}
 .home-page .site-header a:hover{color:var(--sky)}

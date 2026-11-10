@@ -22,7 +22,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/fox-lc.png">
 <link rel="stylesheet" href="site.css?v=20261024-flow">
-<link rel="stylesheet" href="home.css?v=20261110-video-final">
+<link rel="stylesheet" href="home.css?v=20261110-face-safe">
 <script src="site.js?v=20261024-flow" defer>
 </script>
 <script src="home-video.js?v=20261110-video" defer></script>
@@ -47,15 +47,8 @@
 <main id="main" class="cover-main" tabindex="-1">
 <section class="cover" aria-labelledby="home-title">
 <div class="cover-media">
-<img class="cover-poster" src="assets/camp-hero-poster.jpg" width="1280" height="720" alt="지난 글로벌캠프의 모습" fetchpriority="high">
-<video id="camp-hero-video" src="assets/camp-hero.mp4" poster="assets/camp-hero-poster.jpg" width="1280" height="720" muted playsinline loop preload="none" aria-hidden="true" tabindex="-1"></video>
-<div class="cover-media-tools">
-<span>지난 캠프의 모습</span>
-<button id="hero-video-toggle" type="button" aria-label="캠프 영상 재생" title="캠프 영상 재생" aria-controls="camp-hero-video" data-paused="true" hidden>
-<svg class="icon-pause" width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M5 4h3v12H5zm7 0h3v12h-3z"/></svg>
-<svg class="icon-play" width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m6 3 11 7-11 7z"/></svg>
-</button>
-</div>
+<img class="cover-poster" src="assets/camp-hero-poster.jpg?v=20261110-hd-final" width="1280" height="720" alt="지난 글로벌캠프의 모습" fetchpriority="high">
+<video id="camp-hero-video" src="assets/camp-hero.mp4?v=20261110-hd-final" poster="assets/camp-hero-poster.jpg?v=20261110-hd-final" width="1920" height="1080" muted playsinline loop preload="none" aria-hidden="true" tabindex="-1"></video>
 </div>
 <div class="cover-intro">
 <div class="cover-title wrap">
@@ -73,6 +66,13 @@
 <span>폭스러닝센터</span>
 <a href="tel:14332700">전화 1433-2700</a>
 <a href="participate.html#contact">카카오톡 FOX_LC</a>
+<div class="cover-media-tools">
+<span>지난 캠프의 모습</span>
+<button id="hero-video-toggle" type="button" aria-label="캠프 영상 재생" title="캠프 영상 재생" aria-controls="camp-hero-video" data-paused="true" hidden>
+<svg class="icon-pause" width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M5 4h3v12H5zm7 0h3v12h-3z"/></svg>
+<svg class="icon-play" width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m6 3 11 7-11 7z"/></svg>
+</button>
+</div>
 </div>
 </footer>
 </body>

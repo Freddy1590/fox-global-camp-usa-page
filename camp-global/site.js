@@ -18,7 +18,7 @@ copyButton?.addEventListener('click', async () => {
   }
 });
 
-// Show the mobile shortcut only when an existing inquiry action is off screen.
+// Keep the mobile shortcut off the basic information and existing inquiry actions.
 const mobileContact = document.querySelector('.mobile-contact');
 if (mobileContact && 'IntersectionObserver' in window) {
   const visibleContacts = new Set();
@@ -29,7 +29,7 @@ if (mobileContact && 'IntersectionObserver' in window) {
     });
     mobileContact.hidden = visibleContacts.size > 0;
   });
-  document.querySelectorAll('a.btn[href="#contact"], #contact').forEach(target => inquiryObserver.observe(target));
+  document.querySelectorAll('.header-contact, .enrollment-panel, a.btn[href="#contact"], #contact').forEach(target => inquiryObserver.observe(target));
 }
 
 // Keyboard actions stay immediate, including native disclosure controls.

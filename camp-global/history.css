@@ -123,3 +123,8 @@
  .archive-more{font-size:13px;margin-top:4px}.history-entry{padding:22px 18px}.year-heading h2{font-size:42px}
 }
 @media(max-width:360px){.archive-preview{grid-template-columns:92px 1fr;gap:14px}}
+
+.archive-switch a[aria-current="page"]{color:var(--blue);border-bottom-color:var(--blue)}
+.cooperation-main .agreement-document figure{max-width:420px;margin-inline:auto}
+.cooperation-main .agreement-document img{border:1px solid var(--line);border-radius:4px}
+.cooperation-main .education-context{background:var(--mist)}

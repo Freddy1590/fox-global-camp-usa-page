@@ -1,0 +1,41 @@
+.partners-page .back-link{margin-bottom:18px;font-size:14px;font-weight:500}
+.partners-page .page-intro>p{margin-top:24px}
+.partner-grid,.international-news{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 56px}
+.partner-grid .partner-category{margin:0 0 10px;color:var(--blue);font-size:14px;font-weight:700}
+.partner-grid h3 span{font-size:16px;color:var(--muted);font-weight:500;white-space:nowrap}
+.partner-grid .partner-agreement{font-size:14px;color:var(--muted)}
+.partner-history{display:flex;align-items:center;justify-content:space-between;gap:24px;border-top:1px solid var(--line);margin-top:40px;padding-top:22px}
+.partner-history p{font-size:15px;color:var(--muted)}
+.partner-history .text-link{flex-shrink:0}
+.map-surface{position:relative;aspect-ratio:9/4}
+.map-surface>img{width:100%;height:100%}
+.map-marker{position:absolute;left:var(--x);top:var(--y);width:14px;height:14px;border:3px solid #fff;border-radius:50%;transform:translate(-50%,-50%);box-shadow:0 0 0 1px currentColor}
+.exchange{background:var(--blue);color:var(--blue)}
+.cooperation{background:#72541b;color:#72541b}
+.map-marker>span{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);background:#fff;border:1px solid var(--line);border-radius:5px;padding:1px 8px;color:var(--ink);font-size:15px;font-weight:700;line-height:1.7;white-space:nowrap}
+.marker-philippines>span,.marker-kenya>span{bottom:auto;top:18px}
+.map-legend{display:flex;flex-wrap:wrap;gap:12px 28px;margin:20px 0 28px;color:var(--ink);font-size:14px}
+.map-legend>span{display:flex;align-items:center;gap:9px}
+.legend-dot{display:inline-block;width:11px;height:11px;border-radius:50%;flex-shrink:0}
+.country-activities .text-link{font-size:14px;font-weight:500;margin-top:4px}
+.international-news{margin-top:48px}
+.sel-case{max-width:880px}
+.sel-case h2{font-size:clamp(25px,2.7vw,34px)}
+.sel-case .text-link{margin-top:12px}
+.partner-social{margin-top:40px;padding-top:28px;border-top:1px solid var(--line)}
+.partner-social h3{font-size:22px}
+.partner-social .page-links{margin-top:16px}
+.partner-next{display:flex;align-items:center;justify-content:space-between;gap:28px;border-top:1px solid var(--line)}
+.partner-next p{color:var(--muted);margin-top:16px}
+.partner-next .btn{flex-shrink:0}
+@media(max-width:820px){
+ .partner-grid,.international-news{grid-template-columns:1fr;gap:30px}
+ .partner-history,.partner-next{align-items:flex-start;flex-direction:column;gap:12px}
+ .map-marker{width:10px;height:10px;border-width:2px}
+ .map-marker>span{font-size:12px;bottom:13px;padding:1px 5px}
+ .marker-philippines>span,.marker-kenya>span{top:13px;bottom:auto}
+ .map-legend{margin-top:24px;gap:10px 20px;font-size:13px}
+ .international-news{margin-top:32px}
+ .partner-social{margin-top:30px}
+ .partner-next{gap:22px}
+}

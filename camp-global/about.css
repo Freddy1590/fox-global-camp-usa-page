@@ -101,3 +101,6 @@
 .about-page .cooperation-bridge{border-bottom:1px solid var(--line)}
 .about-page .cooperation-bridge .section-heading{margin:0}
 .about-page .cooperation-bridge .text-link{margin-top:24px}
+.about-page .sel-goals{padding-top:0}
+.about-page .sel-goals .learning-list>div{padding-block:18px}
+.about-page .sel-framework{font-size:14px;color:var(--muted);margin-top:20px}

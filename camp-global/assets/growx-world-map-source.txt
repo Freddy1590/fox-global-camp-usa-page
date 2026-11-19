@@ -1,0 +1,5 @@
+World land geometry: Natural Earth 1:110m land, public domain.
+Source: https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_land.geojson
+Terms: https://www.naturalearthdata.com/about/terms-of-use/
+Projection: equirectangular, x=(longitude+180)*3, y=(84-latitude)*3. Antarctica omitted.
+Markers denote countries, not school/campus addresses or camp destinations.

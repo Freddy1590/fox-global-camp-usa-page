@@ -26,6 +26,8 @@
   }
 
   video.muted = true;
+  video.defaultPlaybackRate = 0.85;
+  video.playbackRate = 0.85;
   toggle.hidden = false;
   showState();
   toggle.addEventListener('click', () => {

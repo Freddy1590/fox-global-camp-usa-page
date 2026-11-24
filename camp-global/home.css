@@ -27,7 +27,7 @@
 .cover-camps .btn{min-width:220px;min-height:52px;justify-content:space-between;gap:36px;background:white;border-color:white;border-radius:6px;color:#123f70}
 .cover-camps .btn:hover{background:var(--mist);border-color:var(--mist);color:var(--ink)}
 .home-footer{margin-top:auto;border-top:1px solid var(--line);font-size:12px;color:var(--muted);background:var(--white)}
-.home-footer>.wrap{display:grid;grid-template-columns:1fr auto auto auto;align-items:center;gap:24px;min-height:59px}
+.home-footer>.wrap{display:grid;grid-template-columns:1fr auto auto auto auto;align-items:center;gap:24px;min-height:59px}
 .home-footer a{display:inline-flex;align-items:center;min-height:40px}
 .home-footer a:hover{color:var(--blue)}
 @media(max-width:1080px){
@@ -73,6 +73,7 @@
  .home-footer>.wrap{grid-template-columns:1fr auto;gap:0 18px;padding-block:4px}
  .home-footer .cover-media-tools{grid-column:2;grid-row:1}
  .home-footer a:last-of-type{justify-self:end}
+ .home-footer .footer-sitemap{grid-column:1/-1;justify-self:end}
  .home-page :is(.cover,.home-footer) :is(a,button):focus-visible{outline-color:var(--blue);box-shadow:none}
 }
 @media(max-width:360px){

@@ -51,3 +51,19 @@ document.querySelector('[data-camp-intro]')?.addEventListener('click', event => 
       event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
   try { sessionStorage.setItem(introTransitionKey, String(Date.now())); } catch {}
 });
+
+// Return to the same optional information after visiting its full page.
+function revealArrivalDetails() {
+  let target;
+  try { target = document.getElementById(decodeURIComponent(location.hash.slice(1))); }
+  catch { return; }
+  const details = target?.closest('details[data-open-on-arrival]');
+  if (!details) return;
+  details.open = true;
+  requestAnimationFrame(() => {
+    details.querySelector('summary')?.focus({ preventScroll: true });
+    details.scrollIntoView({ block: 'start' });
+  });
+}
+revealArrivalDetails();
+window.addEventListener('hashchange', revealArrivalDetails);

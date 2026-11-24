@@ -46,8 +46,8 @@ button,a,summary{touch-action:manipulation}
 .brand img{width:90px;height:auto}
 .header-inner nav{display:flex;align-items:center;gap:26px;margin-left:auto}
 .header-inner nav a{font-size:15px;font-weight:700;text-decoration:none;white-space:nowrap;padding:24px 0;position:relative}
-.header-inner nav a[aria-current=page]{color:var(--blue)}
-.header-inner nav a[aria-current=page]:after{content:"";position:absolute;height:2px;left:0;right:0;bottom:15px;background:var(--blue)}
+.header-inner nav a:is([aria-current=page],.is-current-section){color:var(--blue)}
+.header-inner nav a:is([aria-current=page],.is-current-section):after{content:"";position:absolute;height:2px;left:0;right:0;bottom:15px;background:var(--blue)}
 .header-contact{min-height:44px;padding:9px 18px;font-size:14px}
 .site-footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:14px}
 .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
@@ -140,7 +140,7 @@ details[open]>summary:after{content:"−"}
 .header-inner{display:grid;grid-template-columns:1fr auto;gap:0;min-height:0;padding-top:16px}
 .header-inner nav{grid-column:1/-1;grid-row:2;justify-content:space-between;width:100%;gap:12px;margin:8px 0 0}
 .header-inner nav a{font-size:14px;padding:14px 0 19px}
-.header-inner nav a[aria-current=page]:after{bottom:9px}
+.header-inner nav a:is([aria-current=page],.is-current-section):after{bottom:9px}
 .brand{font-size:18px}
 .brand img{width:80px}
 .header-contact{min-height:42px;padding:8px 14px}
@@ -235,7 +235,7 @@ p{line-height:1.8}
 .header-inner nav{gap:28px}
 .header-inner nav a{padding-block:23px;font-weight:650}
 .header-inner nav a:after{content:"";position:absolute;bottom:17px;left:0;right:0;height:2px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform 160ms var(--ease-out)}
-.header-inner nav a[aria-current=page]:after{transform:scaleX(1);bottom:17px}
+.header-inner nav a:is([aria-current=page],.is-current-section):after{transform:scaleX(1);bottom:17px}
 .header-contact{min-height:42px;padding:9px 20px;font-size:14px}
 .page-intro{padding-block:60px 48px}
 .page-links{gap:12px 24px}
@@ -262,10 +262,21 @@ details[open]>.details-body,details[open]>.details-content{animation:details-in 
  .wrap{width:calc(100% - 40px)}.header-inner{min-height:0;padding-top:13px;gap:0}
  .brand{font-size:16px;gap:10px}.brand img{width:68px}.header-contact{min-height:38px;font-size:13px;padding:8px 15px}
  .header-inner nav{margin-top:4px;gap:12px}.header-inner nav a{padding:13px 0 15px;font-size:14px;min-height:44px}
- .header-inner nav a:after,.header-inner nav a[aria-current=page]:after{bottom:8px}
+ .header-inner nav a:after,.header-inner nav a:is([aria-current=page],.is-current-section):after{bottom:8px}
  .section{padding-block:48px}.page-intro{padding-block:38px 32px}.site-footer{padding-block:24px}
  .footer-inner{gap:16px}.page-links{gap:8px 20px}.contact-prompt{width:calc(100% - 40px)}
 }
 @media(max-width:380px){.brand{font-size:14px;gap:7px}.brand img{width:60px}.header-contact{padding:8px 12px}.header-inner nav a{font-size:12px}.header-inner nav{gap:8px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 html.keyboard-input *,html.keyboard-input *::before,html.keyboard-input *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+
+/* Shared location cues and the separate sitemap entry. */
+.breadcrumb{font-size:14px;color:var(--muted);margin-bottom:18px}
+.breadcrumb ol{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;list-style:none;padding:0;margin:0}
+.breadcrumb li{display:flex;align-items:center;gap:10px}
+.breadcrumb li+li::before{content:"/";color:var(--muted)}
+.breadcrumb a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none}
+.breadcrumb a:hover{text-decoration:underline}
+.breadcrumb [aria-current=page]{color:var(--ink);font-weight:650}
+.site-footer a.footer-sitemap,.home-footer a.footer-sitemap{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 18px;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-size:14px;font-weight:650;white-space:nowrap}
+.site-footer a.footer-sitemap:hover,.home-footer a.footer-sitemap:hover{border-color:var(--blue);color:var(--blue)}

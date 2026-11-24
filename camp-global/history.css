@@ -130,3 +130,13 @@
 .cooperation-main .agreement-document .text-link{display:inline-block;min-height:44px;padding-block:10px}
 .cooperation-main #cheongyang-exchange figure{max-width:880px;margin-inline:auto}
 .cooperation-main .education-context{background:var(--mist)}
+.cooperation-main .international-events{min-width:0;scroll-margin-top:128px}
+.cooperation-main .event-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px;align-items:start}
+.cooperation-main .event-grid .entry-heading h4{margin:0;font-size:26px;line-height:1.35;letter-spacing:-.025em;text-wrap:balance}
+.cooperation-main .event-grid .details .additional-grid{grid-template-columns:1fr}
+.cooperation-main .event-sources{display:flex;flex-direction:column;align-items:flex-start;margin-top:18px}
+@media(max-width:760px){
+ .cooperation-main .international-events{scroll-margin-top:110px}
+ .cooperation-main .event-grid{grid-template-columns:1fr;gap:20px}
+ .cooperation-main .event-grid .entry-heading h4{font-size:24px}
+}

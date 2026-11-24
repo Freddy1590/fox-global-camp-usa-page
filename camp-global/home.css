@@ -34,7 +34,6 @@
  .home-page .header-inner{width:calc(100% - 48px);gap:18px}
  .cover-intro{padding-inline:24px}
  .home-page .brand{font-size:15px;gap:8px}
- .home-page .brand img{width:72px}
  .home-page .header-inner nav{gap:16px}
 }
 
@@ -51,7 +50,7 @@
  .home-page .site-header{position:relative;background:white;color:var(--ink)}
  .home-page .header-inner{width:calc(100% - 40px);min-height:0;gap:0}
  .home-page .brand{font-size:16px;gap:9px}
- .home-page .brand img{width:68px;filter:none}
+ .home-page .brand img{filter:none}
  .home-page .header-inner nav{gap:6px}
  .home-page .header-contact{background:var(--blue);border-color:var(--blue);color:white}
  .home-page .site-header a:hover{color:var(--blue)}
@@ -78,7 +77,6 @@
 }
 @media(max-width:360px){
  .home-page .brand{font-size:14px;gap:6px}
- .home-page .brand img{width:58px}
  .cover-intro{padding-block:24px}
  .cover-title h1{font-size:26px}
  .cover-title p{font-size:16px}

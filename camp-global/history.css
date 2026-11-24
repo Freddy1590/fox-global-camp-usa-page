@@ -135,8 +135,16 @@
 .cooperation-main .event-grid .entry-heading h4{margin:0;font-size:26px;line-height:1.35;letter-spacing:-.025em;text-wrap:balance}
 .cooperation-main .event-grid .details .additional-grid{grid-template-columns:1fr}
 .cooperation-main .event-sources{display:flex;flex-direction:column;align-items:flex-start;margin-top:18px}
+@media(min-width:761px){
+ .cooperation-main .event-grid:not(:has(.details[open])){align-items:stretch}
+ .cooperation-main .event-grid:not(:has(.details[open])) > .history-entry{display:flex;flex-direction:column}
+ .cooperation-main .event-grid:not(:has(.details[open])) > .history-entry > .body-copy{margin-bottom:0}
+ .cooperation-main .event-grid:not(:has(.details[open])) > .history-entry > figure{margin-bottom:26px}
+ .cooperation-main .event-grid:not(:has(.details[open])) > .history-entry > .details{margin-top:auto}
+}
 @media(max-width:760px){
  .cooperation-main .international-events{scroll-margin-top:110px}
  .cooperation-main .event-grid{grid-template-columns:1fr;gap:20px}
  .cooperation-main .event-grid .entry-heading h4{font-size:24px}
+ .cooperation-main .event-grid .additional-grid > figure + figure{margin-top:0}
 }
